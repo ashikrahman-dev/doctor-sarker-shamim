@@ -16,7 +16,7 @@
     --color-dark-2: #828282;
     --color-dark-5: #c1c5d3;
     --color-dark-6: #f0f0f0;
-    --color-dark-7: #F2F5F8;
+    --color-dark-7: #f2f5f8;
     --color-dark-8: #fff5e9;
     --color-sky-blue: #33c5f2;
 }
@@ -29,6 +29,14 @@
 
     @variant md {
         padding-inline: 2rem;
+    }
+
+    @variant xl {
+        padding-inline: 4rem;
+    }
+
+    @variant 2xl {
+        padding-inline: 6rem;
     }
 }
 
@@ -152,34 +160,34 @@ body {
 }
 
 .latest-video-slider .splide__arrows .splide__arrow {
-  width: 68px;
-  height: 68px;
-  background: hsla(120, 88%, 57%, 0.20);
-  border-radius: 50%;
-  transition: all 0.15s ease-in-out;
-  opacity: 1;
+    width: 68px;
+    height: 68px;
+    background: hsla(120, 88%, 57%, 0.2);
+    border-radius: 50%;
+    transition: all 0.15s ease-in-out;
+    opacity: 1;
 }
 .latest-video-slider .splide__arrows .splide__arrow:hover {
-  background: #E99010;
+    background: #e99010;
 }
 
 .latest-video-slider .splide__arrows .splide__arrow--prev {
-  left: calc(-68px - 48px);
+    left: calc(-68px - 48px);
 }
 .latest-video-slider .splide__arrows .splide__arrow--next {
-  right: calc(-68px - 48px);
+    right: calc(-68px - 48px);
 }
 
 .latest-video-slider .splide__pagination {
-  bottom: -8px;
+    bottom: -8px;
 }
-.latest-video-slider .splide__pagination .splide__pagination__page{
-  background: hsla(35, 87%, 49%, 0.50);
+.latest-video-slider .splide__pagination .splide__pagination__page {
+    background: hsla(35, 87%, 49%, 0.5);
 }
-.latest-video-slider .splide__pagination .splide__pagination__page.is-active{
-  background: #E99010;
-  transform: scale(1) !important;
-  transition: all 0.15s ease-in-out;
+.latest-video-slider .splide__pagination .splide__pagination__page.is-active {
+    background: #e99010;
+    transform: scale(1) !important;
+    transition: all 0.15s ease-in-out;
 }
 
 /* latest-video-slider -end */
@@ -292,10 +300,10 @@ body {
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+    body {
+        @apply bg-background text-foreground;
     }
 }

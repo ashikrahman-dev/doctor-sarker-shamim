@@ -67,14 +67,14 @@ export default function Training() {
     );
 
     return (
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-accent-bg overflow-hidden">
+        <section className="py-12 md:py-16 xl:py-20 2xl:py-24 bg-accent-bg overflow-hidden">
             <div className="container">
                 {/* Section Heading */}
-                <div className="text-center mb-12 max-w-[854px] mx-auto">
-                    <div className="text-dark self-stretch font-normal text-[54px] font-anton leading-[1.3] mb-4">
+                <div className="text-center mb-6 md:mb-8 xl:mb-10 2xl:mb-12 max-w-[720px] 2xl:max-w-[854px] mx-auto">
+                    <div className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-anton leading-[1.3] mb-4">
                         Training
                     </div>
-                    <p className="font-normal text-2xl text-dark/70">
+                    <p className="font-normal text-sm sm:text-base lg:text-xl 2xl:text-2xl text-dark/70">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
@@ -110,13 +110,13 @@ export default function Training() {
                                 </div>
                                 <div className="col-span-8">
                                     <div className="p-6">
-                                        <h2 className="text-4xl text-light-foreground font-anton leading-[1.3] font-normal mb-4">
+                                        <h2 className="text-xl md:text-2xl xl:text-3xl 2xl:text-4xl text-light-foreground font-anton leading-[1.3] font-normal mb-4">
                                             {training.title}
                                         </h2>
-                                        <h3 className="text-[28px] font-semibold text-light-foreground">
+                                        <h3 className="text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-[28px] font-semibold text-light-foreground">
                                             {training.degree}
                                         </h3>
-                                        <div className="mt-4 flex gap-4 items-center text-lg text-light-foreground/70">
+                                        <div className="mt-4 flex gap-4 items-center text-sm md:text-base xl:text-lg text-light-foreground/70">
                                             <svg
                                                 width="24"
                                                 height="24"

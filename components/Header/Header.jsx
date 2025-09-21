@@ -44,12 +44,12 @@ export default function Header() {
                     <div className="flex items-center gap-4 xl:gap-6 2xl:gap-10">
                         {/* Left Menu */}
                         <nav className="lg:flex items-center justify-between hidden">
-                            <ul className="flex items-center gap-7">
+                            <ul className="flex items-center gap-1 xl:gap-2 2xl:gap-7">
                                 {headerMenuLeft.map((item) => (
                                     <li key={item.id}>
                                         <Link
                                             href={item.link}
-                                            className="text-base flex justify-center py-10 px-3 font-medium text-dark transition-colors hover:bg-primary-main duration-200 relative before:absolute before:content-[''] before:bottom-0 before:w-full before:h-0 before:bg-light-secondary before:transition-all before:duration-100 hover:before:h-0.5 after:absolute after:content-[''] after:h-0 after:w-full after:left-0 after:top-full after:bg-[linear-gradient(0deg,rgba(233,144,16,0.20)_0%,rgba(233,144,16,0)_100%)] after:transition-all after:duration-300 hover:after:h-full hover:after:top-0 overflow-hidden"
+                                            className="text-sm xl:text-base flex justify-center py-8 xl:py-10 px-2 2xl:px-3 font-medium text-dark transition-colors hover:bg-primary-main duration-200 relative before:absolute before:content-[''] before:bottom-0 before:w-full before:h-0 before:bg-light-secondary before:transition-all before:duration-100 hover:before:h-0.5 after:absolute after:content-[''] after:h-0 after:w-full after:left-0 after:top-full after:bg-[linear-gradient(0deg,rgba(233,144,16,0.20)_0%,rgba(233,144,16,0)_100%)] after:transition-all after:duration-300 hover:after:h-full hover:after:top-0 overflow-hidden"
                                         >
                                             {item.name}
                                         </Link>
@@ -71,12 +71,12 @@ export default function Header() {
 
                         {/* Right Menu */}
                         <nav className="lg:flex items-center justify-between hidden">
-                            <ul className="flex items-center gap-7">
+                            <ul className="flex items-center gap-1 xl:gap-2 2xl:gap-7">
                                 {headerMenuRight.map((item) => (
                                     <li key={item.id}>
                                         <Link
                                             href={item.link}
-                                            className="text-base flex justify-center py-10 px-3 font-medium text-dark transition-colors hover:bg-primary-main duration-200 relative before:absolute before:content-[''] before:bottom-0 before:w-full before:h-0 before:bg-light-secondary before:transition-all before:duration-100 hover:before:h-0.5 after:absolute after:content-[''] after:h-0 after:w-full after:left-0 after:top-full after:bg-[linear-gradient(0deg,rgba(233,144,16,0.20)_0%,rgba(233,144,16,0)_100%)] after:transition-all after:duration-300 hover:after:h-full hover:after:top-0 overflow-hidden"
+                                            className="text-sm xl:text-base flex justify-center py-8 xl:py-10 px-2 2xl:px-3 font-medium text-dark transition-colors hover:bg-primary-main duration-200 relative before:absolute before:content-[''] before:bottom-0 before:w-full before:h-0 before:bg-light-secondary before:transition-all before:duration-100 hover:before:h-0.5 after:absolute after:content-[''] after:h-0 after:w-full after:left-0 after:top-full after:bg-[linear-gradient(0deg,rgba(233,144,16,0.20)_0%,rgba(233,144,16,0)_100%)] after:transition-all after:duration-300 hover:after:h-full hover:after:top-0 overflow-hidden"
                                         >
                                             {item.name}
                                         </Link>

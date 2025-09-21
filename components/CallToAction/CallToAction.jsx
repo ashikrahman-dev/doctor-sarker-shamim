@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function CallToAction() {
     return (
-        <div className="py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden bg-[linear-gradient(179deg,rgba(255,211,156,1)_0%,rgba(255,250,244,1)_100%)]">
+        <div className="py-12 md:py-16 xl:py-20 2xl:py-24 overflow-hidden bg-[linear-gradient(179deg,rgba(255,211,156,1)_0%,rgba(255,250,244,1)_100%)]">
             <div className="container">
                 {/* Bg shape */}
                 <div className="relative">
@@ -19,11 +19,11 @@ export default function CallToAction() {
                         </div>
 
                         <div className="col-span-6">
-                            <h2 className="text-[54px] text-light-foreground font-anton leading-[1.3] mb-4">
+                            <h2 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] text-light-foreground font-anton leading-[1.3] mb-4">
                                 Share Your Thoughts
                             </h2>
 
-                            <p className="text-2xl text-light-foreground/70 mb-12">
+                            <p className="text-sm sm:text-base lg:text-xl 2xl:text-2xl text-light-foreground/70 mb-12">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua.

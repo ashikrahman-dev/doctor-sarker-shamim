@@ -44,7 +44,7 @@ const myAchievementData = [
 
 export default function MyAchievements() {
     return (
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-dark overflow-hidden">
+        <section className="py-12 md:py-16 xl:py-20 2xl:py-24 bg-dark overflow-hidden">
             <div className="container">
                 <h2 className="text-[30px] sm:text-3xl md:text-4xl xl:text-[54px] font-normal leading-[1.2] text-white text-center font-anton">
                     My Achievement’s
@@ -52,7 +52,7 @@ export default function MyAchievements() {
             </div>
 
             {/* Partner Logos */}
-            <div className="pt-8 sm:pt-10 md:pt-12 ">
+            <div className="pt-8 xl:pt-10 2xl:pt-12 ">
                 <Splide
                     aria-label="My Favorite Images"
                     extensions={{ AutoScroll }}
@@ -62,7 +62,7 @@ export default function MyAchievements() {
                         focus: "center",
                         perPage: 7,
                         autoScroll: {
-                            speed: 1, // Scrolling speed (1 = slow, 3 = fast)
+                            speed: 0.6, // Scrolling speed (1 = slow, 3 = fast)
                             pauseOnHover: false, // Pause scrolling on hover
                             pauseOnFocus: false, // Pause scrolling on focus
                         },
@@ -71,8 +71,13 @@ export default function MyAchievements() {
                         pagination: false,
                         // Responsive breakpoints
                         breakpoints: {
-                            1199: {
+                            1299: {
                                 gap: "24px",
+                                perPage: 6,
+                            },
+                            1199: {
+                                gap: "20px",
+                                perPage: 5,
                             },
                             768: {
                                 perPage: 4,
@@ -83,7 +88,7 @@ export default function MyAchievements() {
                                 gap: "12px",
                             },
                             320: {
-                                perPage: 3,
+                                perPage: 2,
                             },
                         },
                     }}

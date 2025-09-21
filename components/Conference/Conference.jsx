@@ -70,15 +70,15 @@ const conferenceData = [
 
 export default function Conference() {
     return (
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-dark-8 overflow-hidden">
+        <section className="py-12 md:py-16 xl:py-20 2xl:py-24 bg-dark-8 overflow-hidden">
             <div className="container">
                 {/* Section Heading */}
-                <div className="text-center max-w-[854px] mx-auto">
-                    <div className="text-dark self-stretch font-normal text-[54px] font-anton leading-[1.3] mb-4">
+                <div className="text-center max-w-[720px] 2xl:max-w-[854px] mx-auto">
+                    <h2 className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px]text-[54px] font-anton leading-[1.3] mb-4">
                         Conference
-                    </div>
+                    </h2>
 
-                    <p className="font-normal text-2xl text-dark/70">
+                    <p className="font-normal text-sm sm:text-base lg:text-xl 2xl:text-2xl text-dark/70">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
@@ -110,7 +110,7 @@ export default function Conference() {
                         <SplideTrack>
                             {conferenceData?.map((conference) => (
                                 <SplideSlide
-                                    className="pt-2 pb-8"
+                                    className="pt-2 mb-4 sm:pb-6 xl:pb-8"
                                     key={conference?.id}
                                 >
                                     <div className="flex flex-col col-span-1 bg-white rounded-xl border border-dark-5/30 p-1 transform-fill duration-300  shadow-[0px_24px_48px_0px_rgba(12,14,58,0.0)] hover:shadow-[0px_14px_28px_0px_rgba(12,14,58,0.10)] ">

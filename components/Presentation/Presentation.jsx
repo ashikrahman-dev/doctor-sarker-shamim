@@ -70,14 +70,14 @@ const presentationData = [
 
 export default function Presentation() {
     return (
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-dark-8 overflow-hidden">
+        <section className="py-12 md:py-16 xl:py-20 2xl:py-24 bg-dark-8 overflow-hidden">
             <div className="container">
                 {/* Section Heading */}
-                <div className="text-center mb-12 max-w-[854px] mx-auto">
-                    <div className="text-dark self-stretch font-normal text-[54px] font-anton leading-[1.3] mb-4">
+                <div className="text-center max-w-[720px] 2xl:max-w-[854px] mx-auto">
+                    <h2 className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-anton leading-[1.3] mb-4">
                         Presentation
-                    </div>
-                    <p className="font-normal text-2xl text-dark/70">
+                    </h2>
+                    <p className="font-normal text-sm sm:text-base lg:text-xl 2xl:text-2xl text-dark/70">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua. ua.
@@ -100,9 +100,9 @@ export default function Presentation() {
                             speed: 1500,
                             breakpoints: {
                                 640: { perPage: 1 },
-                                768: { pagination: false },
-                                1024: { perPage: 1, pagination: false },
-                                1400: { perPage: 1 },
+                                768: { perPage: 2, gap: "16px", pagination: false },
+                                1024: { perPage: 3, gap: "20px", pagination: false },
+                                1400: { perPage: 4 },
                             },
                         }}
                     >
