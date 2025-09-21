@@ -41,7 +41,7 @@ export default function Header() {
                     </div>
 
                     {/* Menu & Logo */}
-                    <div className="flex items-center gap-10">
+                    <div className="flex items-center gap-4 xl:gap-6 2xl:gap-10">
                         {/* Left Menu */}
                         <nav className="lg:flex items-center justify-between hidden">
                             <ul className="flex items-center gap-7">
