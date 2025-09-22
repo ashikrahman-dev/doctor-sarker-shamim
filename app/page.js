@@ -1,9 +1,9 @@
 import Achievements from "@/components/Achievements/Achievements";
 import Awards from "@/components/Awards/Awards";
 import CallToAction from "@/components/CallToAction/CallToAction";
-import Certification from "@/components/Certification/Certification";
 import ChiefConsultant from "@/components/ChiefConsultant/ChiefConsultant";
 import Conference from "@/components/Conference/Conference";
+import CurrentPosition from "@/components/CurrentPosition/CurrentPosition";
 import HomeBanner from "@/components/HomeBanner/HomeBanner";
 import LatestArticles from "@/components/LatestArticles/LatestArticles";
 import LatestVideos from "@/components/LatestVideos/LatestVideos";
@@ -18,13 +18,13 @@ export default function Home() {
             <HomeBanner />
             <ChiefConsultant />
             <MyAchievements />
-            <Certification />
+            <CurrentPosition />
+            <LatestArticles />
             <Achievements />
             <Presentation />
             <Training />
-
             <Conference />
-            <LatestArticles />
+
 
             <LatestVideos />
             <Awards />

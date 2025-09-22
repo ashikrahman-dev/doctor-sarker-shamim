@@ -7,51 +7,51 @@ const certificationData = [
     {
         id: 1,
         img: "/images/training-img.svg",
-        title: "Post Graduate Education",
-        degree: "AAAM Board Certification 2019",
-        institute: "Board Certified Aesthetic Dermatologist (AAAM)",
+        title: "MD Codes Tour 2019, Allergan Medical Institute, Cutting Edge and Precise Cosmetic Treatments With Allergan MD Codes. Allergan MD Codes is an innovative concept that has transformed the way cosmetic injectables such as Juvederm and Botox are used in Aesthetic medicine, providing patients with a more holistic approach to anti-aging. Developed by Dr. Mauricio de Maio",
+        country: "INDIA",
+        year: "2019",
     },
     {
         id: 2,
         img: "/images/training-img.svg",
-        title: "Post Graduate Education",
-        degree: "Diploma in Aesthetic Medicine 2016",
-        institute: "American Academy of Aesthetic Medicine, USA",
+        title: "2nd B.A.D CON 2019, Bangladesh Academy of Dermatology, Hands on Training on Dermoscopy by Dr. Subrata Malakar",
+        country: "BANGLADESH",
+        year: "2019",
     },
     {
         id: 3,
         img: "/images/training-img.svg",
-        title: "Post Graduate Education",
-        degree: "FCPS (Dermatology) 2014",
-        institute: "Bangladesh College of Physician and Surgeons",
+        title: "Masters Course in Botulinum Toxin A And Fillers American Academy of Aesthetic Medicine (AAAM), USA Hands on Training by Dr Raj Acquilla",
+        country: "USA",
+        year: "2018",
     },
     {
         id: 4,
         img: "/images/training-img.svg",
-        title: "Post Graduate Education",
-        degree: "AAAM Board Certification 2019",
-        institute: "Board Certified Aesthetic Dermatologist (AAAM)",
+        title: "Master’s Course on Hair Transplantation  American Academy of Aesthetic Medicine (AAAM),USA Hands on Training by Dr. Akaki Tsilosani",
+        country: "USA",
+        year: "2016",
     },
     {
         id: 5,
         img: "/images/training-img.svg",
-        title: "Post Graduate Education",
-        degree: "Diploma in Aesthetic Medicine 2016",
-        institute: "American Academy of Aesthetic Medicine, USA",
+        title: "Clinical Workshops in Level 2 Course 2016 American Academy of Aesthetic Medicine (AAAM), USA",
+        country: "Malaysia",
+        year: "2016",
     },
     {
         id: 6,
         img: "/images/training-img.svg",
-        title: "Post Graduate Education",
-        degree: "FCPS (Dermatology) 2014",
-        institute: "Bangladesh College of Physician and Surgeons",
+        title: "Clinical Workshops in Level 1 Course 2015 American Academy of Aesthetic Medicine (AAAM), Dubai, UAE",
+        country: "UAE",
+        year: "2015",
     },
     {
         id: 7,
         img: "/images/training-img.svg",
-        title: "Post Graduate Education",
-        degree: "Diploma in Aesthetic Medicine 2016",
-        institute: "American Academy of Aesthetic Medicine, USA",
+        title: "Breast Filler by Aquafilling, Czech Republic Hands on Training by Dr. Klokol Yevgen, Plastic Surgeon",
+        country: "BANGLADESH",
+        year: "2014",
     },
 ];
 
@@ -101,7 +101,7 @@ export default function Training() {
                             >
                                 <div className="col-span-4">
                                     <Image
-                                        src={training.img}
+                                        src={training?.img}
                                         alt="certification image"
                                         width={440}
                                         height={280}
@@ -110,11 +110,11 @@ export default function Training() {
                                 </div>
                                 <div className="col-span-8">
                                     <div className="p-6">
-                                        <h2 className="text-xl md:text-2xl xl:text-3xl 2xl:text-4xl text-light-foreground font-anton leading-[1.3] font-normal mb-4">
-                                            {training.title}
+                                        <h2 className="text-xl font-bold text-light-foreground leading-[1.3] mb-4">
+                                            {training?.title}
                                         </h2>
-                                        <h3 className="text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-[28px] font-semibold text-light-foreground">
-                                            {training.degree}
+                                        <h3 className="text-base md:text-lg lg:text-xl font-semibold text-light-foreground/70">
+                                            {training?.country}
                                         </h3>
                                         <div className="mt-4 flex gap-4 items-center text-sm md:text-base xl:text-lg text-light-foreground/70">
                                             <svg
@@ -125,11 +125,12 @@ export default function Training() {
                                                 xmlns="http://www.w3.org/2000/svg"
                                             >
                                                 <path
-                                                    d="M4 11.3333L0 9L12 2L24 9V17.5H22V10.1667L20 11.3333V18.0113L19.7774 18.2864C17.9457 20.5499 15.1418 22 12 22C8.85817 22 6.05429 20.5499 4.22263 18.2864L4 18.0113V11.3333ZM6 12.5V17.2917C7.46721 18.954 9.61112 20 12 20C14.3889 20 16.5328 18.954 18 17.2917V12.5L12 16L6 12.5ZM3.96927 9L12 13.6846L20.0307 9L12 4.31541L3.96927 9Z"
+                                                    d="M9 1V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9ZM20 11H4V19H20V11ZM7 5H4V9H20V5H17V7H15V5H9V7H7V5Z"
                                                     fill="#060C22"
                                                 />
                                             </svg>
-                                            {training.institute}
+
+                                            {training?.year}
                                         </div>
                                     </div>
                                 </div>

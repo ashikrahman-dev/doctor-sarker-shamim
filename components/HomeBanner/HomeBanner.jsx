@@ -1,5 +1,5 @@
 import Image from "next/image";
-import FillButton from "../Button/FillButton/FillButton";
+import AppointmentButton from "../Button/AppointmentButton/AppointmentButton";
 
 export default function HomeBanner() {
     return (
@@ -40,7 +40,11 @@ export default function HomeBanner() {
                         <p className="text-lg xl:text-xl 2xl:text-2xl text-light-foreground leading-[1.3] my-7.5">
                             American Board-Certified Aesthetic Dermatologist
                         </p>
-                        <FillButton link="/" text="Make An Appointments" />
+
+                        {/* CTA buttons (Right) */}
+                        <div className="mt-8">
+                            <AppointmentButton />
+                        </div>
                     </div>
                     <div className="col-span-4">
                         <div className="-ms-8 xl:-ms-12 2xl:-ms-20 -me-8 xl:-me-12 2xl:-me-20">

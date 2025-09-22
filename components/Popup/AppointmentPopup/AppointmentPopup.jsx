@@ -44,13 +44,13 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                         </button>
 
                         <div className="text-center">
-                            <span className="inline-flex text-sm font-medium tracking-[0.14px] leading-[1.42] text-light-foreground px-4 py-1.75 bg-sky-blue rounded-full mb-3">
+                            <span className="inline-flex text-xs xl:text-sm font-medium tracking-[0.14px] leading-[1.42] text-light-foreground px-4 py-1.75 bg-sky-blue rounded-full mb-3">
                                 Transforming Lives, Redefining Beauty
                             </span>
-                            <h2 className="text-5xl font-anton text-light-foreground leading-[1.2] max-w-[580px] mx-auto text-center pt-1 pb-4">
+                            <h2 className="text-2xl lg:text-3xl xl:text-4xl 2xl:text-[42px] font-anton text-light-foreground leading-[1.2] max-w-[580px] mx-auto text-center pt-1 pb-4">
                                 Share the love. <br /> Make an appointments
                             </h2>
-                            <p className="text-light-foreground/70 text-2xl max-w-[580px] mx-auto text-center mb-6">
+                            <p className="text-light-foreground/70 text-base 2xl:text-xl text-center mb-6">
                                 Please complete this form with all the required
                                 information.
                             </p>
@@ -129,7 +129,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                                     </div>
                                 </div>
 
-                                <div className="flex items-center justify-center gap-6 mt-12">
+                                <div className="flex items-center justify-center gap-6 mt-8">
                                     <button
                                         type="submit"
                                         className="bg-light-accent rounded-full py-4 px-8 text-light-foreground font-semibold h-[58px] inline-flex gap-2 items-center transition-colors duration-300 hover:bg-accent-bg cursor-pointer"

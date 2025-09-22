@@ -36,7 +36,7 @@ export default function Header() {
                                 height={24}
                                 alt="whatsapp"
                             />
-                            Whatsapp
+                            <span>Whatsapp</span>
                         </Link>
                     </div>
 

@@ -11,47 +11,47 @@ const latestArticleData = [
             "Intradermal Immunoglobulin E (IgE) Injection in a Specific Interval With Emollient in the Control of Chronic Idiopathic Urticaria and Allergic Rhinitis",
         date: "6 Nov, 2023",
         category: "ARTICLES",
-        author: "John Doe",
-        designation: "Professor of Dermatology",
+        author: "Pro. Dr. S M A Shamim",
+        designation: "DOI:10.7759/cureus.48358",
         authorImg: "/images/author-image.png",
         isSave: false,
     },
     {
         id: crypto.randomUUID(),
         img: "/images/article-featured-img.jpg",
-        title: "Society for Healthcare & Research Development",
+        title: "Annals of International Medical and Dental Research",
         excerpt:
-            "Intradermal Immunoglobulin E (IgE) Injection in a Specific Interval With Emollient in the Control of Chronic Idiopathic Urticaria and Allergic Rhinitis",
-        date: "6 Nov, 2023",
+            "Side Effects of Oral Valacyclovir and Oral Acyclovir in the Treatment of Herpes Zoster",
+        date: "Nov-Dec 2022",
         category: "ARTICLES",
-        author: "John Doe",
-        designation: "Professor of Dermatology",
+        author: "Pro. Dr. S M A Shamim",
+        designation: "Vol. 8, Issue-6",
         authorImg: "/images/author-image.png",
         isSave: false,
     },
     {
         id: crypto.randomUUID(),
         img: "/images/article-featured-img.jpg",
-        title: "Society for Healthcare & Research Development",
+        title: "International Journal of Research in Dermatology",
         excerpt:
-            "Intradermal Immunoglobulin E (IgE) Injection in a Specific Interval With Emollient in the Control of Chronic Idiopathic Urticaria and Allergic Rhinitis",
-        date: "6 Nov, 2023",
+            "Combination of systemic terbinafine (250 mg) twice daily and itraconazole (100 mg) twice in a pulse dose in resistant tinea infection",
+        date: "March-April 2022",
         category: "ARTICLES",
-        author: "John Doe",
-        designation: "Professor of Dermatology",
+        author: "Pro. Dr. S M A Shamim",
+        designation: "Vol. 8, Issue-2",
         authorImg: "/images/author-image.png",
         isSave: false,
     },
     {
         id: crypto.randomUUID(),
         img: "/images/article-featured-img.jpg",
-        title: "Society for Healthcare & Research Development",
+        title: "National Library of Medicine",
         excerpt:
-            "Intradermal Immunoglobulin E (IgE) Injection in a Specific Interval With Emollient in the Control of Chronic Idiopathic Urticaria and Allergic Rhinitis",
-        date: "6 Nov, 2023",
+            '"Lockdown Dermatoses" during COVID-19-A Series of 127 Patients from the Indian Subcontinent',
+        date: "28 Feb, 2022",
         category: "ARTICLES",
-        author: "John Doe",
-        designation: "Professor of Dermatology",
+        author: "Pro. Dr. S M A Shamim",
+        designation: "Vol. 20, Issue-1",
         authorImg: "/images/author-image.png",
         isSave: false,
     },
@@ -82,7 +82,7 @@ export default function LatestArticles() {
                     >
                         <div className="relative">
                             <Image
-                                src="/images/article-featured-img.jpg"
+                                src={article?.img}
                                 alt="Featured image"
                                 width={340}
                                 height={250}
@@ -91,7 +91,7 @@ export default function LatestArticles() {
 
                             {/* Category Name */}
                             <span className=" absolute top-4 left-4 text-xs bg-white rounded-full px-3 py-1.5 text-light-foreground uppercase">
-                                ARTICLES
+                                {article?.category}
                             </span>
                         </div>
 
@@ -111,22 +111,18 @@ export default function LatestArticles() {
                                         fill="#FF6D00"
                                     />
                                 </svg>
-                                6 Nov, 2023
+                                {article?.date}
                             </span>
 
                             {/* Title */}
                             <Link href="/">
                                 <h3 className="text-lg font-anton font-normal leading-[1.3] mb-3">
-                                    Society for Healthcare & Research
-                                    Development
+                                    {article?.title}
                                 </h3>
                             </Link>
                             {/* Excerpt */}
                             <p className="text-sm text-light-foreground/60 font-normal font-plus-jakarta-sans">
-                                Intradermal Immunoglobulin E (IgE) Injection in
-                                a Specific Interval With Emollient in the
-                                Control of Chronic Idiopathic Urticaria and
-                                Allergic Rhinitis
+                                {article?.excerpt}
                             </p>
                             {/* Divider */}
                             <div className="border-t border-dark-2/20 mt-4 mb-3"></div>
@@ -135,7 +131,7 @@ export default function LatestArticles() {
                             <div className="flex items-center justify-between gap-6">
                                 <div className="flex items-center gap-3">
                                     <Image
-                                        src="/images/author-image.png"
+                                        src={article?.authorImg}
                                         alt="Author"
                                         width={30}
                                         height={30}
@@ -143,10 +139,10 @@ export default function LatestArticles() {
                                     />
                                     <div className="flex flex-col">
                                         <span className="text-sm font-bold font-plus-jakarta-sans text-light-foreground mb-1">
-                                            Pro. Dr. S M A Shamim
+                                            {article?.author}
                                         </span>
                                         <span className="text-xs text-light-foreground/60">
-                                            Professor of Dermatology
+                                            {article?.designation}
                                         </span>
                                     </div>
                                 </div>

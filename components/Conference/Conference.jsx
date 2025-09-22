@@ -11,14 +11,11 @@ const conferenceData = [
         img: "/images/conference-placeholder-img.svg",
         title: "COSDERMINDIA 2024",
         excerpt:
-            "Intradermal Immunoglobulin E (IgE) Injection in a Specific Interval With Emollient in the Control of Chronic Idiopathic Urticaria and Allergic Rhinitis",
-        date: "10 May, 2024",
+            "“Comprehensive Guide to Body Fillers - Enhancing Aesthetics with Advanced Techniques” & “Aesthetic Trends Bangladesh Perspective” Presented in COSDERMINDIA 2024, 27th Annual Congress of Cosmetic Dermatology Society India (CDSI), Mumbai, India",
+        date: "1 to 3 Aug, 2024",
         category: "Presentation",
-        country: "India",
+        country: "INDIA",
         flag: "/images/india.png",
-        author: "John Doe",
-        designation: "Professor of Dermatology",
-        authorImg: "/images/author-image.png",
         isSave: false,
     },
     {
@@ -32,7 +29,6 @@ const conferenceData = [
         country: "Bangladesh",
         flag: "/images/bangladesh-flag.svg",
         author: "John Doe",
-        designation: "Professor of Dermatology",
         authorImg: "/images/author-image.png",
         isSave: false,
     },
@@ -75,7 +71,7 @@ export default function Conference() {
                 {/* Section Heading */}
                 <div className="text-center max-w-[720px] 2xl:max-w-[854px] mx-auto">
                     <h2 className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px]text-[54px] font-anton leading-[1.3] mb-4">
-                        Conference
+                        Presentation 
                     </h2>
 
                     <p className="font-normal text-sm sm:text-base lg:text-xl 2xl:text-2xl text-dark/70">
