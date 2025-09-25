@@ -7,63 +7,58 @@ import Image from "next/image";
 
 const presentationData = [
     {
-        id: crypto.randomUUID(),
+        id: 1,
         img: "/images/conference-placeholder-img.svg",
-        title: "COSDERMINDIA 2024",
-        excerpt:
-            "Intradermal Immunoglobulin E (IgE) Injection in a Specific Interval With Emollient in the Control of Chronic Idiopathic Urticaria and Allergic Rhinitis",
-        date: "10 May, 2024",
+        details:
+            "“Comprehensive Guide to Body Fillers - Enhancing Aesthetics with Advanced Techniques” & “Aesthetic Trends Bangladesh Perspective” Presented in COSDERMINDIA 2024, 27th Annual Congress of Cosmetic Dermatology Society India (CDSI), Mumbai, India",
+        date: "1 to 3 Aug, 2024",
         category: "Presentation",
-        country: "India",
+        country: "INDIA",
         flag: "/images/india.png",
-        author: "John Doe",
-        designation: "Professor of Dermatology",
-        authorImg: "/images/author-image.png",
         isSave: false,
     },
     {
-        id: crypto.randomUUID(),
+        id: 2,
         img: "/images/conference-placeholder-img.svg",
-        title: "DERMA MeDeCON 2024",
-        excerpt:
-            "Intradermal Immunoglobulin E (IgE) Injection in a Specific Interval With Emollient in the Control of Chronic Idiopathic Urticaria and Allergic Rhinitis",
-        date: "6 Nov, 2023",
+        details:
+            "“A Tour for Contour : Pioneering Advances in Body Fillers” Presented in DERMA MeDeCON 2024 by SAARC AAD In UAE, Conrad, Dubai",
+        date: "10 May, 2024",
         category: "Presentation",
-        country: "Bangladesh",
+        country: "UAE",
+        flag: "/images/india.png",
+        isSave: false,
+    },
+    {
+        id: 3,
+        img: "/images/conference-placeholder-img.svg",
+        details:
+            "“Breast  Augmentation - How to do it right” Presented in DSCON 2024, 10th International Conference & Live Demonstration Arranged by Society of Dermatologic Surgeons of Bangladesh (SDSB), InterContinental, Dhaka",
+        date: "7 May, 2024",
+        category: "Presentation",
+        country: "DHAKA",
         flag: "/images/bangladesh-flag.svg",
-        author: "John Doe",
-        designation: "Professor of Dermatology",
-        authorImg: "/images/author-image.png",
         isSave: false,
     },
     {
-        id: crypto.randomUUID(),
+        id: 4,
         img: "/images/conference-placeholder-img.svg",
-        title: "DSCON 2024",
-        excerpt:
-            "Intradermal Immunoglobulin E (IgE) Injection in a Specific Interval With Emollient in the Control of Chronic Idiopathic Urticaria and Allergic Rhinitis",
-        date: "10 May, 2024",
+        details:
+            "“Skin Boosters: Unveiling the Reality Amidst the Hype” Presented in World Congress Dialogues in Clinical Dermatology (DiCD) by SAARC AAD, Mayfair Tea Resort, Siliguri, India",
+        date: "5 to 7 Jun, 2024",
         category: "Presentation",
-        country: "India",
+        country: "INDIA",
         flag: "/images/india.png",
-        author: "John Doe",
-        designation: "Professor of Dermatology",
-        authorImg: "/images/author-image.png",
         isSave: false,
     },
     {
-        id: crypto.randomUUID(),
+        id: 5,
         img: "/images/conference-placeholder-img.svg",
-        title: "AMWC 2023",
-        excerpt:
-            "Intradermal Immunoglobulin E (IgE) Injection in a Specific Interval With Emollient in the Control of Chronic Idiopathic Urticaria and Allergic Rhinitis",
-        date: "6 Nov, 2023",
+        details:
+            "“Complications of Hair Transplant Surgery & Management” Presented in TRICON 2023, Live Observational Workshop on Hair Transplant Arranged by Society of Dermatologic Surgeons of Bangladesh (SDSB), Pan Pacific Sonargaon, Dhaka",
+        date: "26 Oct, 2023",
         category: "Presentation",
-        country: "Monaco",
-        flag: "/images/monaco-flag.svg",
-        author: "John Doe",
-        designation: "Professor of Dermatology",
-        authorImg: "/images/author-image.png",
+        country: "DHAKA",
+        flag: "/images/india.png",
         isSave: false,
     },
 ];
@@ -77,11 +72,6 @@ export default function Presentation() {
                     <h2 className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-anton leading-[1.3] mb-4">
                         Presentation
                     </h2>
-                    <p className="font-normal text-sm sm:text-base lg:text-xl 2xl:text-2xl text-dark/70">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. ua.
-                    </p>
                 </div>
 
                 {/* Grid Presentation */}
@@ -100,8 +90,16 @@ export default function Presentation() {
                             speed: 1500,
                             breakpoints: {
                                 640: { perPage: 1 },
-                                768: { perPage: 2, gap: "16px", pagination: false },
-                                1024: { perPage: 3, gap: "20px", pagination: false },
+                                768: {
+                                    perPage: 2,
+                                    gap: "16px",
+                                    pagination: false,
+                                },
+                                1024: {
+                                    perPage: 3,
+                                    gap: "20px",
+                                    pagination: false,
+                                },
                                 1400: { perPage: 4 },
                             },
                         }}
@@ -148,8 +146,8 @@ export default function Presentation() {
                                             </span>
 
                                             {/* Title */}
-                                            <h3 className="text-lg font-anton font-normal leading-[1.3]">
-                                                {presentation?.title}
+                                            <h3 className=" font-semibold leading-[1.3] line-clamp-3">
+                                                {presentation?.details}
                                             </h3>
                                             {/* Divider */}
                                             <div className="border-t border-dark-2/20 mt-4 mb-3"></div>
@@ -166,7 +164,9 @@ export default function Presentation() {
                                                     />
                                                     <div className="flex flex-col">
                                                         <span className="text-sm font-bold font-plus-jakarta-sans text-light-foreground mb-1">
-                                                            {presentation?.country}
+                                                            {
+                                                                presentation?.country
+                                                            }
                                                         </span>
                                                     </div>
                                                 </div>

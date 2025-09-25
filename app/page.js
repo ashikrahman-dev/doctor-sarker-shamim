@@ -21,9 +21,8 @@ export default function Home() {
       <ChiefConsultant />
       <MyAchievements />
       <CurrentPosition />
-      <LatestArticles />
-      <Achievements />
       <NewsFilter data={latestArticleData} />
+      <Achievements />
       <Presentation />
       <Training />
       <Conference />

@@ -63,14 +63,8 @@ export default function LatestArticles() {
             {/* Section Heading */}
             <div className="text-center mb-6 md:mb-8 xl:mb-10 2xl:mb-12 max-w-[720px] 2xl:max-w-[854px] mx-auto">
                 <h2 className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-anton leading-[1.3] mb-4">
-                    Latest ARTICLES
+                    ARTICLES
                 </h2>
-
-                <p className="font-normal text-sm sm:text-base lg:text-xl 2xl:text-2xl text-dark/70">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                </p>
             </div>
 
             {/* Grid Articles */}
