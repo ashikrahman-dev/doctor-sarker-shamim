@@ -190,6 +190,10 @@ body {
     transition: all 0.15s ease-in-out;
 }
 
+.splide__arrow--prev svg {
+    transform: scaleX(1) !important;
+}
+
 /* latest-video-slider -end */
 
 @theme inline {

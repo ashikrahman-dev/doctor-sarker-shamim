@@ -5,9 +5,9 @@ import ChiefConsultant from "@/components/ChiefConsultant/ChiefConsultant";
 import Conference from "@/components/Conference/Conference";
 import CurrentPosition from "@/components/CurrentPosition/CurrentPosition";
 import HomeBanner from "@/components/HomeBanner/HomeBanner";
-import LatestArticles from "@/components/LatestArticles/LatestArticles";
 import LatestVideos from "@/components/LatestVideos/LatestVideos";
 import MyAchievements from "@/components/MyAchievements/MyAchievements";
+import MyExpertise from "@/components/MyExpertise/MyExpertise";
 import NewsFilter from "@/components/NewsFilter/NewsFilter";
 import Presentation from "@/components/Presentation/Presentation";
 import Socials from "@/components/Socials/Socials";
@@ -15,22 +15,23 @@ import Training from "@/components/Training/Training";
 import { latestArticleData } from "@/utils/data";
 
 export default function Home() {
-  return (
-    <main className="min-h-screen">
-      <HomeBanner />
-      <ChiefConsultant />
-      <MyAchievements />
-      <CurrentPosition />
-      <NewsFilter data={latestArticleData} />
-      <Achievements />
-      <Presentation />
-      <Training />
-      <Conference />
+    return (
+        <main className="min-h-screen">
+            <HomeBanner />
+            <MyExpertise />
+            <ChiefConsultant />
+            <MyAchievements />
+            <CurrentPosition />
+            <NewsFilter data={latestArticleData} />
+            <Achievements />
+            <Presentation />
+            <Training />
+            <Conference />
 
-      <LatestVideos />
-      <Awards />
-      <Socials />
-      <CallToAction />
-    </main>
-  );
+            <LatestVideos />
+            <Awards />
+            <Socials />
+            <CallToAction />
+        </main>
+    );
 }
