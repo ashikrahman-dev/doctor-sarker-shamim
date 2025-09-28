@@ -62,7 +62,7 @@ export default function LatestVideos() {
     };
 
     return (
-        <div className="py-12 md:py-16 xl:py-20 2xl:py-24  overflow-hidden bg-white">
+        <div className="py-12 md:py-16 xl:py-20 2xl:py-24  overflow-hidden bg-[linear-gradient(180deg,rgba(255,211,156,1)_0%,rgba(255,250,244,1)_100%)]">
             <div className="container">
                 {/* Section Heading */}
                 <div className="text-center max-w-[720px] 2xl:max-w-[854px] mx-auto">
