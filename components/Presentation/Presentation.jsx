@@ -120,16 +120,8 @@ export default function Presentation() {
                                                 className="w-full rounded-xl"
                                             />
 
-                                            {/* Category Name */}
-                                            <span className=" absolute top-4 left-4 text-xs bg-white rounded-full px-3 py-1.5 text-light-foreground">
-                                                {presentation?.category}
-                                            </span>
-                                        </div>
-
-                                        {/* Content */}
-                                        <div className="pt-5 px-4 pb-6">
                                             {/* Date */}
-                                            <span className="inline-flex items-center gap-2 text-sm font-normal text-light-secondary mb-3">
+                                            <span className=" absolute top-4 left-4 text-xs bg-white rounded-full px-3 py-1.5 inline-flex items-center gap-2 font-normal text-light-secondary">
                                                 <svg
                                                     width="20"
                                                     height="20"
@@ -144,13 +136,17 @@ export default function Presentation() {
                                                 </svg>
                                                 {presentation?.date}
                                             </span>
+                                        </div>
+
+                                        {/* Content */}
+                                        <div className="pt-5 px-4 pb-6">
 
                                             {/* Title */}
-                                            <h3 className=" font-semibold leading-[1.3] line-clamp-3">
+                                            <h3 className=" font-semibold leading-[1.3] line-clamp-2">
                                                 {presentation?.details}
                                             </h3>
                                             {/* Divider */}
-                                            <div className="border-t border-dark-2/20 mt-4 mb-3"></div>
+                                            <div className="border-t border-dark-2/20 mt-6 mb-3"></div>
 
                                             {/* Author box */}
                                             <div className="flex items-center justify-between gap-6">

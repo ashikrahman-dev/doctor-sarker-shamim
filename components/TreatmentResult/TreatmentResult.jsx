@@ -57,11 +57,6 @@ export default function TreatmentResult() {
                     <h2 className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-anton leading-[1.3] mb-4">
                         Current Position
                     </h2>
-                    <p className="font-normal text-sm sm:text-base lg:text-xl 2xl:text-2xl text-dark/70">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. ua.
-                    </p>
                 </div>
 
                 {/* Certification card wrapper */}

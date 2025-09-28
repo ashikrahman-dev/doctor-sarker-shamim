@@ -2,7 +2,6 @@ import Achievements from "@/components/Achievements/Achievements";
 import Awards from "@/components/Awards/Awards";
 import CallToAction from "@/components/CallToAction/CallToAction";
 import ChiefConsultant from "@/components/ChiefConsultant/ChiefConsultant";
-import Conference from "@/components/Conference/Conference";
 import CurrentPosition from "@/components/CurrentPosition/CurrentPosition";
 import HomeBanner from "@/components/HomeBanner/HomeBanner";
 import LatestVideos from "@/components/LatestVideos/LatestVideos";
@@ -26,8 +25,6 @@ export default function Home() {
             <Achievements />
             <Presentation />
             <Training />
-            <Conference />
-
             <LatestVideos />
             <Awards />
             <Socials />

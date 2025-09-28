@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AppointmentPopup from "../Popup/AppointmentPopup/AppointmentPopup";
 
 const headerMenuLeft = [
@@ -19,11 +19,34 @@ const headerMenuRight = [
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            setIsSticky(scrollPosition > 800);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Cleanup
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <>
-            <header className="mt-3 md:mt-4 lg:mt-6 px-4 md:px-6 lg:px-10 xl:px-5 2xl:px-5 absolute top-0 left-0 right-0 z-50">
-                <div className="px-3 md:px-4 lg:px-5.5 bg-white rounded-full flex items-center justify-center md:justify-between h-[102px] border border-white/20 backdrop-blur-md">
+            <header
+                className={`mt-3 md:mt-4 lg:mt-6 px-4 md:px-6 lg:px-10 xl:px-5 2xl:px-5 z-50 transition-all duration-300 ${
+                    isSticky
+                        ? "fixed top-0 left-0 right-0 mt-0 animate-in slide-in-from-top-full duration-300 ease-out"
+                        : "absolute top-0 left-0 right-0"
+                }`}
+            >
+                <div
+                    className={`px-3 md:px-4 lg:px-5.5  rounded-full flex items-center justify-center md:justify-between h-[102px] border border-white/20 transition-all duration-300 ${
+                        isSticky ? "bg-white/60 backdrop-blur-md" : "bg-white/100 backdrop-blur-md "
+                    }`}
+                >
                     {/* CTA buttons (Left) */}
                     <div className="flex items-center">
                         <Link

@@ -5,24 +5,24 @@ import { useState } from "react";
 
 const certificationData = [
     {
-        id: crypto.randomUUID(),
-        img: "/images/achievement-placeholder-img.svg",
-        title: "Post Graduate Education",
-        degree: "AAAM Board Certification 2019",
-        institute: "Board Certified Aesthetic Dermatologist (AAAM)",
-    },
-    {
-        id: crypto.randomUUID(),
-        img: "/images/achievement-placeholder-img.svg",
-        title: "Post Graduate Education",
-        degree: "Diploma in Aesthetic Medicine 2016",
-        institute: "American Academy of Aesthetic Medicine, USA",
-    },
-    {
-        id: crypto.randomUUID(),
+        id: 1,
         img: "/images/achievement-placeholder-img.svg",
         title: "Post Graduate Education",
         degree: "FCPS (Dermatology) 2014",
+        institute: "Bangladesh College of Physician and Surgeons",
+    },
+    {
+        id: crypto.randomUUID(),
+        img: "/images/achievement-placeholder-img.svg",
+        title: "Post Graduate Education",
+        degree: "Diploma in Dermatology (Dip Derm) 2014",
+        institute: "Royal College of Physician and Surgeons of Glasgow, UK",
+    },
+    {
+        id: crypto.randomUUID(),
+        img: "/images/achievement-placeholder-img.svg",
+        title: "Post Graduate Education",
+        degree: "MCPS (Dermatology) 2009",
         institute: "Bangladesh College of Physician and Surgeons",
     },
     {
@@ -43,15 +43,23 @@ const certificationData = [
         id: crypto.randomUUID(),
         img: "/images/achievement-placeholder-img.svg",
         title: "Post Graduate Education",
-        degree: "FCPS (Dermatology) 2014",
-        institute: "Bangladesh College of Physician and Surgeons",
+        degree: "FCGP 2002",
+        institute: "The College of General Practitioners of Bangladesh",
     },
     {
         id: crypto.randomUUID(),
         img: "/images/achievement-placeholder-img.svg",
-        title: "Post Graduate Education",
-        degree: "Diploma in Aesthetic Medicine 2016",
-        institute: "American Academy of Aesthetic Medicine, USA",
+        title: "Graduation",
+        degree: "MBBS 1999",
+        institute: "Institute of Applied Health Sciences",
+        faculty: "Faculty of Medicine, University of Chittagong",
+    },
+    {
+        id: crypto.randomUUID(),
+        img: "/images/achievement-placeholder-img.svg",
+        title: "Undergraduate Education",
+        degree: "Higher Secondary School Certificate 1990",
+        institute: "Govt. Hazi Muhammad Muhsin College",
     },
 ];
 
@@ -72,13 +80,8 @@ export default function Achievements() {
                 {/* Section Heading */}
                 <div className="text-center mb-6 md:mb-8 xl:mb-10 2xl:mb-12 max-w-[720px] 2xl:max-w-[854px] mx-auto">
                     <div className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-anton leading-[1.3] mb-4">
-                        Achievements
+                        Academic Qualification
                     </div>
-                    <p className="font-normal text-sm sm:text-base lg:text-xl 2xl:text-2xl text-dark/70">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. ua.
-                    </p>
                 </div>
 
                 {/* Certification Items with Animation */}
@@ -116,6 +119,11 @@ export default function Achievements() {
                                         <h3 className="text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-[28px] font-semibold text-light-foreground">
                                             {training.degree}
                                         </h3>
+                                        {training?.faculty && (
+                                            <h4 className="text-base md:text-lg lg:text-xl font-semibold text-light-foreground mt-2">
+                                                {training.faculty}
+                                            </h4>
+                                        )}
                                         <div className="mt-4 flex gap-4 items-center text-sm md:text-base xl:text-lg text-light-foreground/70">
                                             <svg
                                                 width="24"

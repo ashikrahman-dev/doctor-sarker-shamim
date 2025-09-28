@@ -1,5 +1,4 @@
 import Image from "next/image";
-import AppointmentButton from "../Button/AppointmentButton/AppointmentButton";
 
 export default function HomeBanner() {
     return (
@@ -42,9 +41,9 @@ export default function HomeBanner() {
                         </p>
 
                         {/* CTA buttons (Right) */}
-                        <div className="mt-8">
+                        {/* <div className="mt-8">
                             <AppointmentButton />
-                        </div>
+                        </div> */}
                     </div>
                     <div className="col-span-4">
                         <div className="-ms-8 xl:-ms-12 2xl:-ms-20 -me-8 xl:-me-12 2xl:-me-20">

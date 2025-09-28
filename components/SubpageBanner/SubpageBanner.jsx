@@ -19,9 +19,9 @@ export default function SubpageBanner({ data }) {
                         {title}
                     </h1>
 
-                    <p className="text-lg xl:text-xl 2xl:text-2xl text-light-foreground/70 leading-[1.3] mt-4 max-w-[810px] mx-auto">
+                    {/* <p className="text-lg xl:text-xl 2xl:text-2xl text-light-foreground/70 leading-[1.3] mt-4 max-w-[810px] mx-auto">
                         {description}
-                    </p>
+                    </p> */}
                 </div>
             </div>
         </section>
