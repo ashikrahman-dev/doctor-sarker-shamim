@@ -69,7 +69,7 @@ export default function AwardDetails({ isOpen, onClose, award }) {
                         {/* Close Button */}
                         <button
                             onClick={onClose}
-                            className="absolute -top-4 -right-4 w-10 h-10 bg-black rounded-full flex items-center justify-center text-white hover:bg-gray-800 transition-colors duration-200 z-10"
+                            className="absolute -top-4 -right-4 w-10 h-10 bg-black rounded-full flex items-center justify-center text-white hover:bg-gray-800 transition-colors duration-200 z-80"
                         >
                             <svg
                                 width="24"
