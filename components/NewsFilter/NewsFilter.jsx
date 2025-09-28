@@ -1,8 +1,8 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
 import { useMemo, useState } from "react";
+import ArticleCard from "../ArticleCard/ArticleCard";
+import DefaultCard from "../DefaultCard/DefaultCard";
 
 export default function NewsFilter({ data }) {
     const itemsPerPage = 8; // 2x4 grid
@@ -18,11 +18,15 @@ export default function NewsFilter({ data }) {
         return ["All", ...uniqueCategories];
     }, [data]);
 
-    // Filter data based on selected category
+    // Filter data based on selected category (case-insensitive)
     const filteredData = useMemo(() => {
         if (!data) return [];
         if (selectedCategory === "All") return data;
-        return data.filter((article) => article.category === selectedCategory);
+        return data.filter(
+            (article) =>
+                article.category?.toLowerCase() ===
+                selectedCategory.toLowerCase()
+        );
     }, [data, selectedCategory]);
 
     // Calculate pagination
@@ -37,6 +41,11 @@ export default function NewsFilter({ data }) {
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
         setCurrentPage(1);
+    };
+
+    // Case-insensitive check for ARTICLES category
+    const isArticlesCategory = (category) => {
+        return category?.toLowerCase() === "articles";
     };
 
     return (
@@ -63,92 +72,39 @@ export default function NewsFilter({ data }) {
             {/* Grid Articles with Animation */}
             <AnimatePresence mode="wait">
                 <motion.div
-                    key={`${selectedCategory}-${currentPage}`} // triggers animation on page/category change
-                    initial={{ opacity: 0, y: 20 }} // start slightly below
-                    animate={{ opacity: 1, y: 0 }} // slide to position
-                    exit={{ opacity: 0, y: -20 }} // exit upward
+                    key={`${selectedCategory}-${currentPage}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
                     transition={{
                         duration: 0.5,
                         ease: [0.25, 0.1, 0.25, 0.25],
                     }}
-                    className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6"
+                    className={
+                        isArticlesCategory(selectedCategory) ||
+                        (selectedCategory === "All" &&
+                            currentItems.some((item) =>
+                                isArticlesCategory(item.category)
+                            ))
+                            ? "grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6" // Stack layout for ARTICLES
+                            : "grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6" // Grid layout for others
+                    }
                 >
-                    {currentItems.map((article, index) => (
-                        <motion.div
-                            key={article?.id}
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{
-                                duration: 0.4,
-                                delay: index * 0.1, // staggered animation
-                                ease: [0.25, 0.1, 0.25, 0.25],
-                            }}
-                            className="flex flex-col col-span-1 bg-white rounded-xl border border-dark-5/30 p-1 transform-fill duration-300 shadow-[0px_24px_48px_0px_rgba(12,14,58,0.0)] hover:shadow-[0px_24px_48px_0px_rgba(12,14,58,0.15)]"
-                        >
-                            <div className="relative">
-                                <Image
-                                    src={article?.img}
-                                    alt="Featured image"
-                                    width={340}
-                                    height={250}
-                                    className="w-full rounded-xl"
-                                />
-
-                                {/* Category Name */}
-                                <span className="absolute top-4 left-4 text-xs bg-white rounded-full px-3 py-1.5 text-light-foreground uppercase">
-                                    {article?.category}
-                                </span>
-                            </div>
-
-                            {/* Content */}
-                            <div className="pt-5 px-4 pb-6">
-                                {/* Date */}
-                                <span className="inline-flex items-center gap-2 text-sm font-normal text-light-secondary mb-3">
-                                    <Image
-                                        src="/images/calendar-icon.svg"
-                                        alt="Calendar"
-                                        width={20}
-                                        height={20}
-                                    />
-                                    {article?.date}
-                                </span>
-
-                                {/* Title */}
-                                <Link href={`/news/${article?.id}`}>
-                                    <h3 className="text-lg font-anton font-normal leading-[1.3] mb-3 min-h-12">
-                                        {article?.title}
-                                    </h3>
-                                </Link>
-                                {/* Excerpt */}
-                                <p className="text-sm text-light-foreground/60 font-normal font-plus-jakarta-sans line-clamp-3">
-                                    {article?.excerpt}
-                                </p>
-                                {/* Divider */}
-                                <div className="border-t border-dark-2/20 mt-4 mb-3"></div>
-
-                                {/* Author box */}
-                                <div className="flex items-center justify-between gap-6">
-                                    <div className="flex items-center gap-3">
-                                        <Image
-                                            src={article?.authorImg}
-                                            alt="Author"
-                                            width={30}
-                                            height={30}
-                                            className="w-9 h-9 rounded-full"
-                                        />
-                                        <div className="flex flex-col">
-                                            <span className="text-sm font-bold font-plus-jakarta-sans text-light-foreground mb-1">
-                                                {article?.author}
-                                            </span>
-                                            <span className="text-xs text-light-foreground/60">
-                                                {article?.designation}
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                    ))}
+                    {currentItems.map((article, index) =>
+                        isArticlesCategory(article.category) ? (
+                            <ArticleCard
+                                key={article.id}
+                                article={article}
+                                index={index}
+                            />
+                        ) : (
+                            <DefaultCard
+                                key={article.id}
+                                article={article}
+                                index={index}
+                            />
+                        )
+                    )}
                 </motion.div>
             </AnimatePresence>
 
