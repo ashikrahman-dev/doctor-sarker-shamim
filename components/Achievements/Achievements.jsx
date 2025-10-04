@@ -79,7 +79,7 @@ export default function Achievements() {
             <div className="container">
                 {/* Section Heading */}
                 <div className="text-center mb-6 md:mb-8 xl:mb-10 2xl:mb-12 max-w-[720px] 2xl:max-w-[854px] mx-auto">
-                    <div className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-anton leading-[1.3] mb-4">
+                    <div className="text-dark self-stretch font-normal text-2xl lg:text-3xl xl:text-4xl font-anton leading-[1.3] mb-4">
                         Academic Qualification
                     </div>
                 </div>
@@ -113,10 +113,10 @@ export default function Achievements() {
                                 </div>
                                 <div className="col-span-8">
                                     <div className="p-6">
-                                        <h2 className="text-xl md:text-2xl xl:text-3xl 2xl:text-4xl text-light-foreground font-anton leading-[1.3] font-normal mb-4">
+                                        <h2 className="text-xl md:text-2xl xl:text-3xl text-light-foreground font-anton leading-[1.3] font-normal mb-3">
                                             {training.title}
                                         </h2>
-                                        <h3 className="text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-[28px] font-semibold text-light-foreground">
+                                        <h3 className="text-base md:text-lg lg:text-xl font-semibold text-light-foreground">
                                             {training.degree}
                                         </h3>
                                         {training?.faculty && (

@@ -85,7 +85,7 @@ export default function MobileMenuPopup({ isOpen, onClose }) {
                                         <Link
                                             href={menu?.link}
                                             onClick={onClose} // ✅ Close modal on menu click
-                                            className="group relative text-2xl sm:text-3xl md:text-5xl font-black uppercase font-albert inline-block overflow-hidden"
+                                            className="group relative text-2xl sm:text-3xl md:text-4xl font-black uppercase font-albert inline-block overflow-hidden"
                                         >
                                             {/* Reveal Text Animation */}
                                             <span className="block relative">

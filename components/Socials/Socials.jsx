@@ -65,10 +65,9 @@ export default function Socials() {
             <div className="container">
                 {/* Section Heading */}
                 <div className="text-center max-w-[720px] 2xl:max-w-[854px] mx-auto">
-                    <h2 className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-anton leading-[1.3] mb-4">
+                    <h2 className="text-dark self-stretch font-normal text-2xl lg:text-3xl xl:text-4xl font-anton  leading-[1.3] mb-4">
                         Socials
                     </h2>
-                    
                 </div>
             </div>
 
@@ -83,7 +82,7 @@ export default function Socials() {
                         focus: "center",
                         perPage: 6.5,
                         autoScroll: {
-                            speed: 1, // Scrolling speed (1 = slow, 3 = fast)
+                            speed: 0.7, // Scrolling speed (1 = slow, 3 = fast)
                             pauseOnHover: false, // Pause scrolling on hover
                             pauseOnFocus: false, // Pause scrolling on focus
                         },
@@ -114,8 +113,17 @@ export default function Socials() {
                                 {/* Overlay */}
                                 <div className="absolute w-full h-full rounded-2xl inset-0 bg-[linear-gradient(177deg,rgba(0,0,0,0)_10.92%,#000_91.26%)] z-10"></div>
                                 {/* Social Media Link */}
-                                <div className="flex items-center gap-3 px-4 py-3 bg-white/15 text-white absolute  z-30 rounded-2xl backdrop-blur-[7px] bottom-5 text-xl ">
-                                    <Image src={slide?.socialMediaIcon || "/icons/facebook.svg"} alt={slide?.socialMedia} width={28} height={28} className="w-7 h-7" />
+                                <div className="flex items-center gap-3 px-4 py-3 bg-white/15 text-white absolute z-30 rounded-2xl backdrop-blur-[7px] bottom-5 text-base ">
+                                    <Image
+                                        src={
+                                            slide?.socialMediaIcon ||
+                                            "/icons/facebook.svg"
+                                        }
+                                        alt={slide?.socialMedia}
+                                        width={20}
+                                        height={20}
+                                        className="w-5 h-5"
+                                    />
                                     {slide?.socialMedia || "Facebook"}
                                 </div>
                                 {/* Image */}
@@ -126,7 +134,6 @@ export default function Socials() {
                                     height={100}
                                     className="max-w-full h-auto w-full rounded-2xl"
                                 />
-                                
                             </div>
                         </SplideSlide>
                     ))}

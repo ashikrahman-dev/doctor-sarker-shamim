@@ -17,7 +17,7 @@ export default function CurrentPosition() {
             <div className="container">
                 {/* Section Heading */}
                 <div className="text-center mb-6 md:mb-8 xl:mb-10 2xl:mb-12 max-w-[720px] 2xl:max-w-[854px] mx-auto">
-                    <h2 className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-anton leading-[1.3] mb-4">
+                    <h2 className="text-dark self-stretch font-normal text-2xl lg:text-3xl xl:text-4xl font-anton leading-[1.3] mb-4">
                         Current Position
                     </h2>
                 </div>
@@ -47,10 +47,10 @@ export default function CurrentPosition() {
                                         {certification?.date}
                                     </span>
                                     {/* Title */}
-                                    <h2 className="text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl text-light-foreground font-anton leading-[1.3] font-normal mb-3 md:mb-4 2xl:mb-5">
+                                    <h2 className="text-xl sm:text-2xl lg:text-3xl text-light-foreground font-anton leading-[1.3] font-normal mb-3 ">
                                         {certification?.title}
                                     </h2>
-                                    <p className="font-normal text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-dark/70">
+                                    <p className="font-normal text-sm sm:text-base lg:text-lg xl:text-xl text-dark/70">
                                         {certification?.excerpt}
                                     </p>
                                     <p className="font-normal text-sm sm:text-base lg:text-lg text-dark/70 mt-2">

@@ -38,7 +38,7 @@ export default function ContactSection() {
                 {/* Get In Touch -start */}
                 <div className="rounded-4xl bg-white grid grid-cols-1 md:grid-cols-2 gap-[30px] min-h-[650px]">
                     <div className="px-4 lg:px-24 py-6 lg:py-[100px] max-w-[700px] bg-gradient-to-r from-white to-[#ffffff31] rounded-4xl">
-                        <div className="text-light-foreground self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-anton leading-[1.3] mb-4">
+                        <div className="text-light-foreground self-stretch font-normal text-2xl lg:text-3xl xl:text-4xl font-anton  leading-[1.3] mb-4">
                             Contact Us
                         </div>
                         <p className="font-normal text-sm sm:text-base text-light-foreground/70">
@@ -125,8 +125,6 @@ export default function ContactSection() {
                     </div>
                 </div>
             </div>
-
-
         </section>
     );
 }

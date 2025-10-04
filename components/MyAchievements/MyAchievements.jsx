@@ -46,7 +46,7 @@ export default function MyAchievements() {
     return (
         <section className="py-12 md:py-16 xl:py-20 2xl:py-24 bg-dark overflow-hidden">
             <div className="container">
-                <h2 className="text-[30px] sm:text-3xl md:text-4xl xl:text-[54px] font-normal leading-[1.2] text-white text-center font-anton">
+                <h2 className="text-2xl lg:text-3xl xl:text-4xl font-normal leading-[1.2] text-white text-center font-anton">
                     My Achievement’s
                 </h2>
             </div>

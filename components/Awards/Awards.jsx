@@ -64,12 +64,12 @@ export default function Awards() {
                 <div className="container">
                     {/* Section Heading */}
                     <div className="text-center max-w-[720px] 2xl:max-w-[854px] mx-auto">
-                        <div className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-anton leading-[1.3] mb-4">
+                        <div className="text-dark self-stretch font-normal text-2xl lg:text-3xl xl:text-4xl font-anton leading-[1.3] mb-4">
                             My awards
                         </div>
                     </div>
                     {/* Awards Card */}
-                    <div className="pt-6 lg:pt-8 xl:pt-10 2xl:pt-12 grid grid-cols-6 gap-6">
+                    <div className="pt-6 lg:pt-8 xl:pt-10 2xl:pt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-6">
                         {awardsData?.map((award) => (
                             <div
                                 key={award?.id}

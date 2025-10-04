@@ -8,7 +8,7 @@ export default function CallToAction() {
                 {/* Bg shape */}
                 <div className="relative">
                     <div className="w-[calc(100%-64px)] h-[384px] bg-light-foreground rounded-[48px] absolute left-8 right-8 -bottom-8 z-0"></div>
-                    <div className="grid grid-cols-12 items-center p-12 gap-16 rounded-[36px] bg-[linear-gradient(180deg,rgba(255,150,17,1)_0%,rgba(248,204,148,1)_100%)] relative z-10">
+                    <div className="grid grid-cols-6 md:grid-cols-12 items-center p-12 gap-10 xl:gap-12 2xl:gap-16 rounded-[36px] bg-[linear-gradient(180deg,rgba(255,150,17,1)_0%,rgba(248,204,148,1)_100%)] relative z-10">
                         <div className="col-span-6 ">
                             <Image
                                 src="/images/call-to-action-img.png"
@@ -19,11 +19,11 @@ export default function CallToAction() {
                         </div>
 
                         <div className="col-span-6">
-                            <h2 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] text-light-foreground font-anton leading-[1.3] mb-4">
+                            <h2 className="text-2xl lg:text-3xl xl:text-4xltext-light-foreground font-anton leading-[1.3] mb-4">
                                 Share Your Thoughts
                             </h2>
 
-                            <p className="text-sm sm:text-base lg:text-xl 2xl:text-2xl text-light-foreground/70 mb-12">
+                            <p className="text-sm sm:text-base lg:text-xl text-light-foreground/70 mb-12">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua.
@@ -51,7 +51,12 @@ export default function CallToAction() {
 
                                 {/* Arrow icon */}
                                 <div className="absolute -right-34 -top-18 z-0">
-                                    <Image src="/images/cta-arrow-icon.svg" alt="arrow icon" width={122} height={135}  />
+                                    <Image
+                                        src="/images/cta-arrow-icon.svg"
+                                        alt="arrow icon"
+                                        width={122}
+                                        height={135}
+                                    />
                                 </div>
                             </div>
                         </div>

@@ -71,10 +71,9 @@ export default function Training() {
             <div className="container">
                 {/* Section Heading */}
                 <div className="text-center mb-6 md:mb-8 xl:mb-10 2xl:mb-12 max-w-[720px] 2xl:max-w-[854px] mx-auto">
-                    <div className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-anton leading-[1.3] mb-4">
+                    <div className="text-dark self-stretch font-normal text-2xl lg:text-3xl xl:text-4xl font-anton leading-[1.3] mb-4">
                         Training
                     </div>
-                    
                 </div>
 
                 {/* Certification Items with Animation */}
@@ -109,7 +108,7 @@ export default function Training() {
                                         <h2 className="text-xl font-bold text-light-foreground leading-[1.3] mb-4">
                                             {training?.title}
                                         </h2>
-                                        <h3 className="text-base md:text-lg lg:text-xl font-semibold text-light-foreground/70">
+                                        <h3 className="text-base md:text-lg font-semibold text-light-foreground/70">
                                             {training?.country}
                                         </h3>
                                         <div className="mt-4 flex gap-4 items-center text-sm md:text-base xl:text-lg text-light-foreground/70">

@@ -6,10 +6,10 @@ export default function ChiefConsultant() {
         <section className="py-12 md:py-16 xl:py-20 2xl:py-24  bg-white overflow-hidden">
             <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 xl:gap-12 2xl:gap-16 items-center">
                 <div className="col-span-1 order-2 md:order-1">
-                    <h2 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] leading-[1.3] font-anton font-normal text-dark">
+                    <h2 className="text-2xl lg:text-3xl xl:text-4xl leading-[1.3] font-anton font-normal text-dark">
                         Chief Consultant & CEO
                     </h2>
-                    <p className="text-base lg:text-lg xl:text-xl 2xl:text-2xl text-dark/70 mt-4">
+                    <p className="text-base lg:text-lg xl:text-xl text-dark/70 mt-4">
                         Laser Treat, Dhaka Dermatology Institute, DHI & Clinic21
                     </p>
 

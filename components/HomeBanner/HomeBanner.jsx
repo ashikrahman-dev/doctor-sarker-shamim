@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function HomeBanner() {
     return (
-        <section className="bg-dark-8 pt-[180px] relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-[980px] before:h-full before:bg-[linear-gradient(270deg,rgba(247,231,208,0)_22.87%,#FFE4C2_62.4%)] after:absolute after:content-[''] after:right-0 after:top-0 after:w-[980px] after:h-full after:bg-[linear-gradient(90deg,rgba(247,231,208,0)_22.87%,#FFE4C2_62.4%)]">
+        <section className="bg-dark-8 pt-[180px] relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-[980px] before:h-full before:bg-[linear-gradient(270deg,rgba(247,231,208,0)_22.87%,#FFE4C2_62.4%)] after:absolute after:content-[''] after:right-0 after:top-0 after:w-[980px] after:h-full after:bg-[linear-gradient(90deg,rgba(247,231,208,0)_22.87%,#FFE4C2_62.4%)] overflow-hidden">
             <div className="container z-10 relative">
                 <div className="text-center">
                     <span className="inline-flex text-xs lg:text-sm font-medium tracking-[0.14px] leading-[1.42] text-light-foreground px-4 py-1.75 bg-sky-blue rounded-full mb-3">
                         Transforming Lives, Redefining Beauty
                     </span>
-                    <h1 className="text-4xl xl:text-5xl 2xl:text-7xl text-light-foreground leading-[1.3] font-normal font-anton">
+                    <h1 className="text-2xl xl:text-3xl 2xl:text-5xl text-light-foreground leading-[1.3] font-normal font-anton">
                         Professor Dr. Sarker Mahbub Ahmed Shamim
                     </h1>
                 </div>
@@ -20,7 +20,7 @@ export default function HomeBanner() {
                         {/* Counter bos */}
                         <div className="flex gap-6">
                             <div className="w-full rounded-2xl bg-white/35 text-center p-4">
-                                <h3 className="text-3xl md:text-4xl xl:text-5xl text-light-foreground font-anton leading-[1.4]">
+                                <h3 className="text-xl md:text-2xl xl:text-3xl text-light-foreground font-anton leading-[1.4]">
                                     50,000
                                 </h3>
                                 <p className="text-light-foreground text-sm 2xl:text-base leading-[1.5]">
@@ -28,7 +28,7 @@ export default function HomeBanner() {
                                 </p>
                             </div>
                             <div className="w-full rounded-2xl bg-white/35 text-center p-4">
-                                <h3 className="text-3xl md:text-4xl xl:text-5xl text-light-foreground font-anton leading-[1.4]">
+                                <h3 className="text-xl md:text-2xl xl:text-3xl text-light-foreground font-anton leading-[1.4]">
                                     25+
                                 </h3>
                                 <p className="text-light-foreground text-sm 2xl:text-base leading-[1.5]">
@@ -36,7 +36,7 @@ export default function HomeBanner() {
                                 </p>
                             </div>
                         </div>
-                        <p className="text-lg xl:text-xl 2xl:text-2xl text-light-foreground leading-[1.3] my-7.5">
+                        <p className="text-base md:text-lg text-light-foreground leading-[1.3] my-7.5">
                             American Board-Certified Aesthetic Dermatologist
                         </p>
 
@@ -58,7 +58,7 @@ export default function HomeBanner() {
                     </div>
                     <div className="col-span-4">
                         <div className="w-full rounded-2xl bg-white/35 py-9 px-6 backdrop-blur-[7px] mb-28">
-                            <h3 className="text-lg xl:text-xl 2xl:text-2xl text-light-foreground leading-[1.32] font-anton">
+                            <h3 className="text-lg xl:text-xl text-light-foreground leading-[1.32] font-anton">
                                 To provide state of the art treatments,
                                 technologies and procedures for management of
                                 your dermatology, skin care and aesthetic

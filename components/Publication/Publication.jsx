@@ -5,7 +5,7 @@ export default function Publication() {
         <section className="container py-12 md:py-16 xl:py-20 2xl:py-24  bg-white overflow-hidden">
             {/* Section Heading */}
             <div className="text-center mb-6 md:mb-8 xl:mb-10 2xl:mb-12 max-w-[720px] 2xl:max-w-[854px] mx-auto">
-                <h2 className="text-dark self-stretch font-normal text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-anton leading-[1.3] mb-4">
+                <h2 className="text-dark self-stretch font-normal text-2xl lg:text-3xl xl:text-4xl font-anton  leading-[1.3] mb-4">
                     Publication
                 </h2>
             </div>
@@ -24,7 +24,7 @@ export default function Publication() {
                     <h2 className="text-3xl lg:text-4xl  leading-[1.3] font-anton font-normal text-dark pb-3">
                         SYNOPSIS OF DERMATOSURGERY
                     </h2>
-                    <p className="text-base lg:text-lg xl:text-xl text-dark/70 mt-4 flex items-center gap-2">
+                    <p className="text-base lg:text-lg text-dark/70 mt-4 flex items-center gap-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
@@ -35,7 +35,7 @@ export default function Publication() {
                         </svg>
                         Assistant to Author
                     </p>
-                    <p className="text-base lg:text-lg xl:text-xl text-dark/70 mt-4 flex items-center gap-2">
+                    <p className="text-base lg:text-lg text-dark/70 mt-4 flex items-center gap-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
@@ -46,7 +46,7 @@ export default function Publication() {
                         </svg>
                         Name of the Author: Prof. M.U. Kabir Chowdhury
                     </p>
-                    <p className="text-base lg:text-lg xl:text-xl text-dark/70 mt-4 flex items-center gap-2">
+                    <p className="text-base lg:text-lg text-dark/70 mt-4 flex items-center gap-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
@@ -57,7 +57,7 @@ export default function Publication() {
                         </svg>
                         Distributor: Parash Publishers
                     </p>
-                    <p className="text-base lg:text-lg xl:text-xl text-dark/70 mt-4 flex items-center gap-2">
+                    <p className="text-base lg:text-lg text-dark/70 mt-4 flex items-center gap-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
@@ -68,7 +68,7 @@ export default function Publication() {
                         </svg>
                         New market, Dhaka, Bangladesh.
                     </p>
-                    <p className="text-base lg:text-lg xl:text-xl text-dark/70 mt-4 flex items-center gap-2">
+                    <p className="text-base lg:text-lg text-dark/70 mt-4 flex items-center gap-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
