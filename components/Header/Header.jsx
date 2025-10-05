@@ -43,7 +43,7 @@ export default function Header() {
                 }`}
             >
                 <div
-                    className={`px-3 md:px-4 lg:px-5.5  rounded-full flex items-center justify-between gap-6 h-18 lg:h-[102px] border border-white/20 transition-all duration-300 ${
+                    className={`px-3 md:px-4 lg:px-5.5  rounded-full flex items-center justify-between gap-6 h-16 md:h-18 lg:h-[102px] border border-white/20 transition-all duration-300 ${
                         isSticky
                             ? "bg-white/60 backdrop-blur-md"
                             : "bg-white/100 backdrop-blur-md "

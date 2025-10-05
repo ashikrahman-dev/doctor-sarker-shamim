@@ -52,7 +52,7 @@ export default function ExpertiseCard() {
                         interval: 5000,
                         speed: 1500,
                         breakpoints: {
-                            640: { perPage: 1 },
+                            640: { perPage: 1.25 },
                             768: {
                                 perPage: 2,
                                 gap: "16px",
