@@ -83,9 +83,9 @@ export default function Experiences() {
                         {currentItems.map((experience) => (
                             <div
                                 key={experience?.id}
-                                className="p-1.5 lg:p-2 2xl:p-2.5 bg-white rounded-3xl shadow-[0px_24px_48px_0px_rgba(12,14,58,0.04)] grid grid-cols-12 gap-4 xl:gap-5 2xl:gap-6 items-center"
+                                className="p-1.5 lg:p-2 2xl:p-2.5 bg-white rounded-3xl shadow-[0px_24px_48px_0px_rgba(12,14,58,0.04)] grid grid-cols-1 md:grid-cols-12 gap-4 xl:gap-5 2xl:gap-6 items-center"
                             >
-                                <div className="col-span-4">
+                                <div className="grid-cols-1 md:col-span-4">
                                     <Image
                                         src={experience?.img}
                                         alt="experience image"
@@ -94,7 +94,7 @@ export default function Experiences() {
                                         className="w-full rounded-3xl"
                                     />
                                 </div>
-                                <div className="col-span-8">
+                                <div className="grid-cols-1 md:col-span-8">
                                     {/* Content */}
                                     <div className="p-4 xl:p-5 2xl:p-6">
                                         {/* Location & Date */}

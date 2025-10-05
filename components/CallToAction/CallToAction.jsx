@@ -7,8 +7,8 @@ export default function CallToAction() {
             <div className="container">
                 {/* Bg shape */}
                 <div className="relative">
-                    <div className="w-[calc(100%-64px)] h-[384px] bg-light-foreground rounded-[48px] absolute left-8 right-8 -bottom-8 z-0"></div>
-                    <div className="grid grid-cols-6 md:grid-cols-12 items-center p-12 gap-10 xl:gap-12 2xl:gap-16 rounded-[36px] bg-[linear-gradient(180deg,rgba(255,150,17,1)_0%,rgba(248,204,148,1)_100%)] relative z-10">
+                    <div className="w-[calc(100%-64px)] h-[384px] bg-light-foreground rounded-3xl md:rounded-[48px] absolute left-8 right-8 -bottom-6 md:-bottom-8 z-0"></div>
+                    <div className="grid grid-cols-6 md:grid-cols-12 items-center p-5 sm:p-6 md:p-8 lg:p-10 xl:p-12 gap-10 xl:gap-12 2xl:gap-16 rounded-3xl md:rounded-[36px] bg-[linear-gradient(180deg,rgba(255,150,17,1)_0%,rgba(248,204,148,1)_100%)] relative z-10">
                         <div className="col-span-6 ">
                             <Image
                                 src="/images/call-to-action-img.png"
@@ -18,20 +18,22 @@ export default function CallToAction() {
                             />
                         </div>
 
-                        <div className="col-span-6">
+                        <div className="col-span-6 text-center md:text-start">
                             <h2 className="text-2xl lg:text-3xl xl:text-4xltext-light-foreground font-anton leading-[1.3] mb-4">
                                 Share Your Thoughts
                             </h2>
 
-                            <p className="text-sm sm:text-base lg:text-xl text-light-foreground/70 mb-12">
+                            <p className="text-sm sm:text-base lg:text-xl text-light-foreground/70 mb-8 md:mb-12">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua.
                             </p>
-                            <div className="relative inline-flex">
+                            <div className="relative inline-flex pb-2 md:pb-0">
                                 <Link
                                     href="/"
-                                    className="bg-light-foreground rounded-full py-4 px-8 text-white font-semibold leading-[1.2] h-[58px] inline-flex gap-2 items-center group transition-colors duration-300 hover:bg-accent-bg hover:text-light-foreground relative z-10"
+                                    className="
+                                    
+                                    bg-light-foreground rounded-full py-3 lg:py-4 px-5 lg:px-8 text-white text-sm lg:text-base font-semibold leading-[1.2] lg:h-[58px] inline-flex gap-2 items-center group transition-colors duration-300 hover:bg-accent-bg hover:text-light-foreground cursor-pointer relative z-10"
                                 >
                                     Make An Appointments
                                     <svg

@@ -69,7 +69,7 @@ export default function Awards() {
                         </div>
                     </div>
                     {/* Awards Card */}
-                    <div className="pt-6 lg:pt-8 xl:pt-10 2xl:pt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-6">
+                    <div className="pt-6 lg:pt-8 xl:pt-10 2xl:pt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6">
                         {awardsData?.map((award) => (
                             <div
                                 key={award?.id}

@@ -45,7 +45,7 @@ export default function DefaultCard({ article, index }) {
 
                 {/* Title */}
                 <Link href={`/news/${article?.id}`}>
-                    <h3 className="text-lg font-anton font-normal leading-[1.3] mb-3 min-h-12">
+                    <h3 className="text-lg font-anton font-normal leading-[1.3] mb-3 min-h-auto md:min-h-12">
                         {article?.title}
                     </h3>
                 </Link>

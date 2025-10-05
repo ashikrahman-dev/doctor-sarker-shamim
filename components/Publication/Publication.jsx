@@ -10,7 +10,7 @@ export default function Publication() {
                 </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 md:gap-12 xl:gap-16 items-center">
                 <div className="col-span-1">
                     <Image
                         src="/images/chief-consultant-img.png"
@@ -21,7 +21,7 @@ export default function Publication() {
                     />
                 </div>
                 <div className="col-span-1">
-                    <h2 className="text-3xl lg:text-4xl  leading-[1.3] font-anton font-normal text-dark pb-3">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl  leading-[1.3] font-anton font-normal text-dark pb-3">
                         SYNOPSIS OF DERMATOSURGERY
                     </h2>
                     <p className="text-base lg:text-lg text-dark/70 mt-4 flex items-center gap-2">

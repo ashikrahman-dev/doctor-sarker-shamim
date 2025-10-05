@@ -52,7 +52,7 @@ export default function NewsFilter({ data }) {
         <div className="container py-12 md:py-16 xl:py-20 2xl:py-24 bg-white overflow-hidden">
             {/* Category Filter */}
             <div className="mb-8 md:mb-12">
-                <div className="flex flex-nowrap gap-2 md:gap-3 justify-start overflow-x-scroll md:overflow-auto">
+                <div className="flex flex-nowrap gap-2 md:gap-3 justify-start overflow-x-scroll md:overflow-auto snap-x snap-proximity ">
                     {categories.map((category) => (
                         <button
                             key={category}
