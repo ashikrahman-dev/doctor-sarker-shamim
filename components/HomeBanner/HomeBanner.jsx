@@ -19,19 +19,19 @@ export default function HomeBanner() {
                     <div className="col-span-4 md:mb-28">
                         {/* Counter bos */}
                         <div className="flex gap-4 sm:gap-6">
-                            <div className="w-full rounded-2xl bg-white/35 text-center p-4">
+                            <div className="w-full rounded-md md:rounded-2xl bg-white/35 text-center p-4">
                                 <h3 className="text-xl md:text-2xl xl:text-3xl text-light-foreground font-anton leading-[1.4]">
                                     50,000
                                 </h3>
-                                <p className="text-light-foreground text-sm 2xl:text-base leading-[1.5]">
+                                <p className="text-light-foreground text-xs md:text-sm 2xl:text-base leading-[1.5]">
                                     Patient Served
                                 </p>
                             </div>
-                            <div className="w-full rounded-2xl bg-white/35 text-center p-4">
+                            <div className="w-full rounded-md md:rounded-2xl bg-white/35 text-center p-4">
                                 <h3 className="text-xl md:text-2xl xl:text-3xl text-light-foreground font-anton leading-[1.4]">
                                     25+
                                 </h3>
-                                <p className="text-light-foreground text-sm 2xl:text-base leading-[1.5]">
+                                <p className="text-light-foreground text-xs md:text-sm 2xl:text-base leading-[1.5]">
                                     Years of Experience
                                 </p>
                             </div>
@@ -52,8 +52,8 @@ export default function HomeBanner() {
                         </div>
                     </div>
                     <div className="col-span-4 absolute md:static bottom-0 md:bottom-auto w-full md:w-auto left-0 md:left-auto">
-                        <div className="w-full rounded-2xl bg-white/35 py-9 px-6 backdrop-blur-[7px] md:mb-28">
-                            <h3 className="text-lg xl:text-xl text-light-foreground leading-[1.32] font-anton">
+                        <div className="w-full md:rounded-2xl bg-white/35 p-4 md:py-9 md:px-6 backdrop-blur-[7px] md:mb-28">
+                            <h3 className="text-base md:text-lg xl:text-xl text-light-foreground leading-[1.32] font-anton">
                                 To provide state of the art treatments,
                                 technologies and procedures for management of
                                 your dermatology, skin care and aesthetic
