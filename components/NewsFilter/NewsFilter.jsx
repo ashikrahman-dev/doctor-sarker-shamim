@@ -52,7 +52,21 @@ export default function NewsFilter({ data }) {
         <div className="container py-12 md:py-16 xl:py-20 2xl:py-24 bg-white overflow-hidden">
             {/* Category Filter */}
             <div className="mb-8 md:mb-12">
-                <div className="flex flex-nowrap gap-2 md:gap-3 justify-start overflow-x-scroll md:overflow-auto snap-x snap-proximity ">
+                <div
+                    className="flex flex-nowrap gap-2 md:gap-3 justify-start overflow-x-scroll md:overflow-auto snap-x snap-proximity 
+                
+                max-h-full
+                pb-2
+  [&::-webkit-scrollbar]:h-1
+  [&::-webkit-scrollbar]:w-full
+  [&::-webkit-scrollbar-track]:rounded-full
+  [&::-webkit-scrollbar-track]:bg-accent-bg/40
+  [&::-webkit-scrollbar-thumb]:rounded-full
+  [&::-webkit-scrollbar-thumb]:bg-light-accent/50
+  dark:[&::-webkit-scrollbar-track]:bg-light-accent
+  dark:[&::-webkit-scrollbar-thumb]:bg-light-accent
+                "
+                >
                     {categories.map((category) => (
                         <button
                             key={category}
