@@ -4,7 +4,7 @@ export default function HomeBanner() {
     return (
         <section className="bg-dark-8 pt-28 xl:pt-[180px] relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-[980px] before:h-full before:bg-[linear-gradient(270deg,rgba(247,231,208,0)_22.87%,#FFE4C2_62.4%)] after:absolute after:content-[''] after:right-0 after:top-0 after:w-[980px] after:h-full after:bg-[linear-gradient(90deg,rgba(247,231,208,0)_22.87%,#FFE4C2_62.4%)] overflow-hidden">
             <div className="container z-10 relative">
-                <div className="text-center mb-8 md:mb-0">
+                <div className="text-center mb-6 md:mb-0">
                     <span className="inline-flex text-xs lg:text-sm font-medium tracking-[0.14px] leading-[1.42] text-light-foreground px-4 py-1.75 bg-sky-blue rounded-full mb-3">
                         Transforming Lives, Redefining Beauty
                     </span>
@@ -18,7 +18,7 @@ export default function HomeBanner() {
                     {/* Left */}
                     <div className="col-span-4 md:mb-28">
                         {/* Counter bos */}
-                        <div className="flex gap-6">
+                        <div className="flex gap-4 sm:gap-6">
                             <div className="w-full rounded-2xl bg-white/35 text-center p-4">
                                 <h3 className="text-xl md:text-2xl xl:text-3xl text-light-foreground font-anton leading-[1.4]">
                                     50,000
@@ -36,7 +36,7 @@ export default function HomeBanner() {
                                 </p>
                             </div>
                         </div>
-                        <p className="text-base md:text-lg text-light-foreground leading-[1.3] mt-7 md:my-7.5 text-center md:text-left">
+                        <p className="text-sm sm:text-base md:text-lg text-light-foreground leading-[1.3] mt-5 md:my-7.5 text-center md:text-left">
                             American Board-Certified Aesthetic Dermatologist
                         </p>
                     </div>
