@@ -12,7 +12,7 @@ export default function AppointmentButton() {
             {/* CTA button */}
             <button
                 onClick={() => setIsOpen(true)}
-                className="bg-light-accent rounded-full py-4 px-8 text-light-foreground font-semibold leading-[1.2] h-[58px] inline-flex gap-2 items-center group transition-colors duration-300 hover:bg-accent-bg cursor-pointer"
+                className="bg-light-accent rounded-full py-3 lg:py-4 px-5 lg:px-8 text-light-foreground text-sm lg:text-base font-semibold leading-[1.2] lg:h-[58px] inline-flex gap-2 items-center group transition-colors duration-300 hover:bg-accent-bg cursor-pointer"
             >
                 Make An Appointment
                 <svg

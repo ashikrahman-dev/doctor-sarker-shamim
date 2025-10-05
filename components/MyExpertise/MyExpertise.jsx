@@ -6,7 +6,7 @@ export default function MyExpertise() {
             <div className="container">
                 {/* Section Heading */}
                 <div className="text-center max-w-[720px] 2xl:max-w-[854px] mx-auto">
-                    <h2 className="text-dark self-stretch font-normal text-2xl lg:text-3xl xl:text-4xl font-anton leading-[1.3] mb-4">
+                    <h2 className="text-dark self-stretch font-normal text-2xl lg:text-3xl xl:text-4xl font-anton leading-[1.3]">
                         My Expertise Areas
                     </h2>
                 </div>

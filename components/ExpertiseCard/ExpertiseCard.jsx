@@ -52,11 +52,18 @@ export default function ExpertiseCard() {
                         interval: 5000,
                         speed: 1500,
                         breakpoints: {
-                            640: { perPage: 1.25 },
+                            640: {
+                                perPage: 1,
+                                type: "loop",
+                                perMove: 1,
+                                arrows: false,
+                                focus: "center",
+                            },
                             768: {
                                 perPage: 2,
                                 gap: "16px",
                                 pagination: false,
+                                focus: "center",
                             },
                             1024: {
                                 perPage: 3,
@@ -73,7 +80,7 @@ export default function ExpertiseCard() {
                                 className="pt-2 pb-8"
                                 key={expertise?.id}
                             >
-                                <div className="pt-[310px] rounded-2xl overflow-hidden relative">
+                                <div className="min-h-[350px] rounded-2xl overflow-hidden relative">
                                     {/* Image */}
                                     <Image
                                         src={expertise?.img}
@@ -82,8 +89,8 @@ export default function ExpertiseCard() {
                                         height={500}
                                         className="absolute top-0 left-0 w-full h-full object-cover -z-0"
                                     />
-                                    <div className="bg-[linear-gradient(177deg,rgba(40,33,23,0)_10.92%,#282117_91.26%)] px-6 pb-11 pt-12.5 z-0 relative">
-                                        <h4 className="text-white font-anton text-2xl uppercase tracking-[1.32] min-h-16">
+                                    <div className="bg-[linear-gradient(177deg,rgba(40,33,23,0)_10.92%,#282117_91.26%)] px-6 pb-11 pt-12.5 z-0 absolute bottom-0 left-0 right-0 flex items-end justify-center md:justify-end">
+                                        <h4 className="text-white font-anton text-2xl uppercase tracking-[1.32] text-center md:text-left">
                                             {expertise?.name}
                                         </h4>
                                     </div>

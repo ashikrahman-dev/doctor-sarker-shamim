@@ -5,7 +5,7 @@ export default function ChiefConsultant() {
     return (
         <section className="py-12 md:py-16 xl:py-20 2xl:py-24  bg-white overflow-hidden">
             <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 xl:gap-12 2xl:gap-16 items-center">
-                <div className="col-span-1 order-2 md:order-1">
+                <div className="col-span-1 order-2 md:order-1 text-center md:text-left">
                     <h2 className="text-2xl lg:text-3xl xl:text-4xl leading-[1.3] font-anton font-normal text-dark">
                         Chief Consultant & CEO
                     </h2>
@@ -53,7 +53,7 @@ export default function ChiefConsultant() {
                     </div>
 
                     {/* CTA buttons (Right) */}
-                    <div className="mt-8 xl:mt-10 2xl:mt-12">
+                    <div className="mt-8 xl:mt-10 2xl:mt-12 flex justify-center md:justify-start">
                         <AppointmentButton />
                     </div>
                 </div>

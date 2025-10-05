@@ -52,12 +52,12 @@ export default function NewsFilter({ data }) {
         <div className="container py-12 md:py-16 xl:py-20 2xl:py-24 bg-white overflow-hidden">
             {/* Category Filter */}
             <div className="mb-8 md:mb-12">
-                <div className="flex flex-wrap gap-3 justify-start">
+                <div className="flex flex-nowrap gap-2 md:gap-3 justify-start overflow-x-scroll md:overflow-auto">
                     {categories.map((category) => (
                         <button
                             key={category}
                             onClick={() => handleCategoryChange(category)}
-                            className={`px-6 py-3 rounded-full text-sm tracking-wide font-semibold transition-all duration-300 cursor-pointer border  ${
+                            className={`px-4 md:px-6 py-2 md:py-3 shrink-0 rounded-full text-xs md:text-sm tracking-wide font-semibold transition-all duration-300 cursor-pointer border  ${
                                 selectedCategory === category
                                     ? "bg-light-accent text-white shadow-md border-light-accent"
                                     : "bg-white text-light-foreground border-light-foreground hover:bg-light-accent hover:text-white hover:border-light-accent"
