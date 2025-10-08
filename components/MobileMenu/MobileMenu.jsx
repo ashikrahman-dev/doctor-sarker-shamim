@@ -7,8 +7,9 @@ import MobileMenuPopup from "../Popup/MobileMenuPopup/MobileMenuPopup";
 
 const mobileMenu = [
     { id: 1, name: "Home", link: "/" },
-    { id: 2, name: "Services", link: "/services" },
-    { id: 3, name: "Doctors", link: "/doctors" },
+    { id: 2, name: "Gallery", link: "/gallery" },
+    { id: 3, name: "News", link: "/news" },
+    { id: 4, name: "Contact", link: "/contact" },
 ];
 
 export default function MobileMenu() {
