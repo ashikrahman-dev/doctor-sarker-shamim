@@ -44,7 +44,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                         </button>
 
                         <div className="text-center">
-                            <span className="inline-flex text-[10px] md:text-xs xl:text-sm font-medium tracking-[0.14px] leading-[1.42] text-light-foreground px-2 md:px-4 py-1 md:py-1.75 bg-sky-blue rounded-full mb-3">
+                            <span className=" text-[10px] md:text-xs xl:text-sm font-medium tracking-[0.14px] leading-[1.42] text-light-foreground px-2 md:px-4 py-1 md:py-1.75 bg-sky-blue rounded-full mb-3 hidden md:inline-flex">
                                 Transforming Lives, Redefining Beauty
                             </span>
                             <h2 className="text-2xl lg:text-3xl xl:text-4xl 2xl:text-[42px] font-anton text-light-foreground leading-[1.2] max-w-[580px] mx-auto text-center pt-1 pb-2 md:pb-4">
@@ -56,7 +56,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                             </p>
 
                             <form className="flex flex-col mx-auto">
-                                <div className="grid grid-cols-1 gap-4 md:gap-x-8 md:gap-y-6 sm:grid-cols-2">
+                                <div className="grid grid-cols-1 gap-3 md:gap-x-8 md:gap-y-6 sm:grid-cols-2">
                                     {/* Name */}
                                     <div>
                                         <label
@@ -129,7 +129,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                                     </div>
                                 </div>
 
-                                <div className="flex items-center justify-center gap-6 mt-8">
+                                <div className="flex items-center justify-center gap-6 mt-4 md:mt-8">
                                     <button
                                         type="submit"
                                         className="bg-light-accent rounded-full py-3 lg:py-4 px-5 lg:px-8 text-light-foreground text-sm lg:text-base font-semibold leading-[1.2] lg:h-[58px] inline-flex gap-2 items-center group transition-colors duration-300 hover:bg-accent-bg cursor-pointer"
