@@ -39,7 +39,7 @@ export function DatePickerField() {
 
     return (
         <div className="flex flex-col gap-2 ">
-            <Label htmlFor="date" className="flex justify-start text-sm text-dark font-semibold">
+            <Label htmlFor="date" className="flex justify-start text-xs md:text-sm text-dark font-semibold">
                 Date
             </Label>
             <div className="relative flex gap-2">
@@ -47,7 +47,7 @@ export function DatePickerField() {
                     id="date"
                     value={value}
                     placeholder="June 01, 2025"
-                    className="pr-10 border-0 block w-full h-12 md:h-[58px] rounded-lg bg-dark-7 p-4 text-base text-dark font-medium  placeholder:text-dark/50 focus:outline-none focus-within:outline-none focus:border-0 focus:shadow-none focus-visible:ring-0"
+                    className="pr-10 border-0 block w-full h-10 sm:h-12 md:h-[58px] rounded-md md:rounded-lg bg-dark-7 p-3 md:p-4 text-sm md:text-base text-dark font-medium  placeholder:text-dark/50 focus:outline-none focus-within:outline-none focus:border-0 focus:shadow-none focus-visible:ring-0"
                     onChange={(e) => {
                         const date = new Date(e.target.value)
                         setValue(e.target.value)

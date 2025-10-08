@@ -14,7 +14,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                     exit={{ opacity: 0 }}
                 >
                     <motion.div
-                        className="bg-white rounded-3xl shadow-xl w-[90%] max-w-[946px] p-12 relative"
+                        className="bg-white rounded-3xl shadow-xl w-[90%] max-w-[946px] px-4 py-6 md:p-12 relative"
                         initial={{ scale: 0.8, opacity: 0, y: 50 }}
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         exit={{ scale: 0.8, opacity: 0, y: 50 }}
@@ -27,7 +27,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                         {/* Close Button */}
                         <button
                             onClick={onClose}
-                            className="absolute -top-0 -right-8 text-gray-500 hover:text-black cursor-pointer"
+                            className="absolute -top-8 md:-top-0 right-0 md:-right-8 text-gray-500 hover:text-black cursor-pointer"
                         >
                             <svg
                                 width="24"
@@ -44,24 +44,24 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                         </button>
 
                         <div className="text-center">
-                            <span className="inline-flex text-xs xl:text-sm font-medium tracking-[0.14px] leading-[1.42] text-light-foreground px-4 py-1.75 bg-sky-blue rounded-full mb-3">
+                            <span className="inline-flex text-[10px] md:text-xs xl:text-sm font-medium tracking-[0.14px] leading-[1.42] text-light-foreground px-2 md:px-4 py-1 md:py-1.75 bg-sky-blue rounded-full mb-3">
                                 Transforming Lives, Redefining Beauty
                             </span>
-                            <h2 className="text-2xl lg:text-3xl xl:text-4xl 2xl:text-[42px] font-anton text-light-foreground leading-[1.2] max-w-[580px] mx-auto text-center pt-1 pb-4">
+                            <h2 className="text-2xl lg:text-3xl xl:text-4xl 2xl:text-[42px] font-anton text-light-foreground leading-[1.2] max-w-[580px] mx-auto text-center pt-1 pb-2 md:pb-4">
                                 Share the love. <br /> Make an appointments
                             </h2>
-                            <p className="text-light-foreground/70 text-base 2xl:text-xl text-center mb-6">
+                            <p className="text-light-foreground/70 text-sm md:text-base 2xl:text-xl text-center mb-4 md:mb-6">
                                 Please complete this form with all the required
                                 information.
                             </p>
 
                             <form className="flex flex-col mx-auto">
-                                <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                                <div className="grid grid-cols-1 gap-4 md:gap-x-8 md:gap-y-6 sm:grid-cols-2">
                                     {/* Name */}
                                     <div>
                                         <label
                                             htmlFor="full-name"
-                                            className="flex text-sm text-dark font-semibold mb-2"
+                                            className="flex text-xs md:text-sm text-dark font-semibold mb-2"
                                         >
                                             Your name
                                         </label>
@@ -70,7 +70,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                                             name="full-name"
                                             type="text"
                                             placeholder="Your name"
-                                            className="block w-full h-12 md:h-[58px] rounded-lg bg-dark-7 p-4 text-base text-dark placeholder:text-dark/50 focus:outline-none"
+                                            className="block w-full h-10 sm:h-12 md:h-[58px] rounded-md md:rounded-lg bg-dark-7 p-3 md:p-4 text-sm md:text-base text-dark placeholder:text-dark/50 focus:outline-none"
                                         />
                                     </div>
 
@@ -78,7 +78,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                                     <div>
                                         <label
                                             htmlFor="email"
-                                            className="flex text-sm text-dark font-semibold mb-2"
+                                            className="flex text-xs md:text-sm text-dark font-semibold mb-2"
                                         >
                                             Your email address
                                         </label>
@@ -87,7 +87,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                                             name="email"
                                             type="email"
                                             placeholder="Your email address"
-                                            className="block w-full h-12 md:h-[58px] rounded-lg bg-dark-7 p-4 text-base text-dark placeholder:text-dark/50 focus:outline-none"
+                                            className="block w-full h-10 sm:h-12 md:h-[58px] rounded-md md:rounded-lg bg-dark-7 p-3 md:p-4 text-sm md:text-base text-dark placeholder:text-dark/50 focus:outline-none"
                                         />
                                     </div>
 
@@ -95,7 +95,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                                     <div>
                                         <label
                                             htmlFor="phone-number"
-                                            className="flex text-sm text-dark font-semibold mb-2"
+                                            className="flex text-xs md:text-sm text-dark font-semibold mb-2"
                                         >
                                             Mobile Number
                                         </label>
@@ -104,7 +104,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                                             name="phone-number"
                                             type="text"
                                             placeholder="123-456-7890"
-                                            className="block w-full h-12 md:h-[58px] rounded-lg bg-dark-7 p-4 text-base text-dark placeholder:text-dark/50 focus:outline-none"
+                                            className="block w-full h-10 sm:h-12 md:h-[58px] rounded-md md:rounded-lg bg-dark-7 p-3 md:p-4 text-sm md:text-base text-dark placeholder:text-dark/50 focus:outline-none"
                                         />
                                     </div>
 
@@ -117,14 +117,14 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                                     <div className="col-span-full">
                                         <label
                                             htmlFor="message"
-                                            className="flex text-sm text-dark font-semibold mb-2"
+                                            className="flex text-xs md:text-sm text-dark font-semibold mb-2"
                                         >
                                             Message
                                         </label>
                                         <textarea
                                             id="message"
                                             placeholder="Type Here"
-                                            className="block w-full h-36 rounded-lg bg-dark-7 p-4 text-base text-dark placeholder:text-dark/50 focus:outline-none resize-none"
+                                            className="block w-full h-20 md:h-36 rounded-md md:rounded-lg bg-dark-7 p-3 md:p-4 text-sm md:text-base text-dark placeholder:text-dark/50 focus:outline-none resize-none"
                                         ></textarea>
                                     </div>
                                 </div>
@@ -132,7 +132,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                                 <div className="flex items-center justify-center gap-6 mt-8">
                                     <button
                                         type="submit"
-                                        className="bg-light-accent rounded-full py-4 px-8 text-light-foreground font-semibold h-[58px] inline-flex gap-2 items-center transition-colors duration-300 hover:bg-accent-bg cursor-pointer"
+                                        className="bg-light-accent rounded-full py-3 lg:py-4 px-5 lg:px-8 text-light-foreground text-sm lg:text-base font-semibold leading-[1.2] lg:h-[58px] inline-flex gap-2 items-center group transition-colors duration-300 hover:bg-accent-bg cursor-pointer"
                                     >
                                         Make An Appointment
                                         <svg
