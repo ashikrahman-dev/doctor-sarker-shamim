@@ -53,18 +53,15 @@ export default function NewsFilter({ data }) {
             {/* Category Filter */}
             <div className="mb-8 md:mb-12">
                 <div
-                    className="flex flex-nowrap gap-2 md:gap-3 justify-start overflow-x-scroll md:overflow-auto snap-x snap-proximity 
-                
-                max-h-full
-                pb-2
-  [&::-webkit-scrollbar]:h-1
-  [&::-webkit-scrollbar]:w-full
-  [&::-webkit-scrollbar-track]:rounded-full
-  [&::-webkit-scrollbar-track]:bg-accent-bg/40
-  [&::-webkit-scrollbar-thumb]:rounded-full
-  [&::-webkit-scrollbar-thumb]:bg-light-accent/50
-  dark:[&::-webkit-scrollbar-track]:bg-light-accent
-  dark:[&::-webkit-scrollbar-thumb]:bg-light-accent
+                    className="flex flex-nowrap gap-2 md:gap-3 justify-start overflow-x-scroll md:overflow-auto snap-x snap-proximity max-h-full pb-2
+                    [&::-webkit-scrollbar]:h-1
+                    [&::-webkit-scrollbar]:w-full
+                    [&::-webkit-scrollbar-track]:rounded-full
+                    [&::-webkit-scrollbar-track]:bg-accent-bg/40
+                    [&::-webkit-scrollbar-thumb]:rounded-full
+                    [&::-webkit-scrollbar-thumb]:bg-light-accent/50
+                    dark:[&::-webkit-scrollbar-track]:bg-light-accent
+                    dark:[&::-webkit-scrollbar-thumb]:bg-light-accent
                 "
                 >
                     {categories.map((category) => (
@@ -124,13 +121,13 @@ export default function NewsFilter({ data }) {
 
             {/* Pagination - only show if there are multiple pages */}
             {totalPages > 1 && (
-                <div className="flex justify-center items-center gap-5 mt-12">
+                <div className="flex justify-center items-center gap-3 md:gap-5 mt-10 md:mt-12">
                     {/* Previous Arrow */}
                     <button
                         onClick={() =>
                             setCurrentPage((prev) => Math.max(prev - 1, 1))
                         }
-                        className="rounded-full bg-[#33f23333] hover:bg-light-accent transition-colors duration-300 cursor-pointer w-[68px] h-[68px] flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="rounded-full bg-[#33f23333] hover:bg-light-accent transition-colors duration-300 cursor-pointer w-12 xl:w-[68px] h-12 xl:h-[68px] flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={currentPage === 1}
                     >
                         <svg
@@ -153,7 +150,7 @@ export default function NewsFilter({ data }) {
                         <button
                             key={i}
                             onClick={() => setCurrentPage(i + 1)}
-                            className={`px-4 py-2 text-lg font-extrabold transition duration-300 ${
+                            className={`px-1 md:px-4 py-2 text-sm md:text-base xl:text-lg font-extrabold transition duration-300 ${
                                 currentPage === i + 1
                                     ? "text-light-foreground border-accent"
                                     : "text-light-foreground/50 cursor-pointer hover:text-light-foreground"
@@ -170,7 +167,7 @@ export default function NewsFilter({ data }) {
                                 Math.min(prev + 1, totalPages)
                             )
                         }
-                        className="rounded-full bg-[#33f23333] hover:bg-light-accent transition-colors duration-300 cursor-pointer w-[68px] h-[68px] flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="rounded-full bg-[#33f23333] hover:bg-light-accent transition-colors duration-300 cursor-pointer w-12 xl:w-[68px] h-12 xl:h-[68px] flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={currentPage === totalPages}
                     >
                         <svg

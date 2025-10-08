@@ -119,17 +119,17 @@ export default function Experiences() {
                 </AnimatePresence>
 
                 {/* Pagination with Arrow Buttons */}
-                <div className="flex justify-center items-center gap-5 mt-12">
+                <div className="flex justify-center items-center gap-3 md:gap-5 mt-10 md:mt-12">
                     {/* Previous Arrow */}
                     <button
                         onClick={() =>
                             setCurrentPage((prev) => Math.max(prev - 1, 1))
                         }
-                        className="rounded-full bg-[#33f23333] hover:bg-light-accent transition-colors duration-300 cursor-pointer w-[68px] h-[68px] flex items-center justify-center"
+                        className="rounded-full bg-[#33f23333] hover:bg-light-accent transition-colors duration-300 cursor-pointer w-12 xl:w-[68px] h-12 xl:h-[68px] flex items-center justify-center"
                         disabled={currentPage === 1}
                     >
                         <svg
-                            className=" transform rotate-180"
+                            className=" transform rotate-180 w-5 md:w-6 h-5 md:h-6"
                             width="25"
                             height="24"
                             viewBox="0 0 25 24"
@@ -148,11 +148,10 @@ export default function Experiences() {
                         <button
                             key={i}
                             onClick={() => setCurrentPage(i + 1)}
-                            className={`px-4 py-2 text-lg font-extrabold transition duration-300 ${
-                                currentPage === i + 1
+                            className={`px-1 md:px-4 py-2 text-sm md:text-base xl:text-lg font-extrabold transition duration-300 ${currentPage === i + 1
                                     ? "text-light-foreground border-accent "
                                     : "text-light-foreground/50 cursor-pointer hover:text-light-foreground"
-                            }`}
+                                }`}
                         >
                             {i + 1}
                         </button>
@@ -165,10 +164,11 @@ export default function Experiences() {
                                 Math.min(prev + 1, totalPages)
                             )
                         }
-                        className="rounded-full bg-[#33f23333] hover:bg-light-accent transition-colors duration-300 cursor-pointer w-[68px] h-[68px] flex items-center justify-center"
+                        className="rounded-full bg-[#33f23333] hover:bg-light-accent transition-colors duration-300 cursor-pointer w-12 xl:w-[68px] h-12 xl:h-[68px] flex items-center justify-center"
                         disabled={currentPage === totalPages}
                     >
                         <svg
+                            className="w-5 md:w-6 h-5 md:h-6"
                             width="25"
                             height="24"
                             viewBox="0 0 25 24"

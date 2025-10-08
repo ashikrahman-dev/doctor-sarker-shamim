@@ -171,6 +171,13 @@ body {
     background: #e99010;
 }
 
+@media (max-width: 1024px) {
+    .splide__arrow {
+        width: 48px;
+        height: 48px;
+    }
+}
+
 .latest-video-slider .splide__arrows .splide__arrow--prev {
     left: calc(-68px - 48px);
 }
