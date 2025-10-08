@@ -35,10 +35,10 @@ const footerMenus = [
 
 export default function Footer() {
     return (
-        <div className="bg-[linear-gradient(180deg,rgba(38,47,77,1)_0%,rgba(14,20,42,1)_100%)] pt-24 overflow-hidden">
+        <div className="bg-[linear-gradient(180deg,rgba(38,47,77,1)_0%,rgba(14,20,42,1)_100%)] pt-16 md:pt-20 xl:pt-24 overflow-hidden">
             <div className="container">
                 <div className="flex flex-wrap xl:flex-nowrap items-start gap-6 xl:gap-[103px]">
-                    <Link href="/" className="w-full max-w-16 xl:max-w-[100px] 2xl:max-w-[148px]">
+                    <Link href="/" className="w-full max-w-16 xl:max-w-[100px] 2xl:max-w-[148px] mb-4">
                         <Image
                             src="/images/footer-logo.svg"
                             alt="Footer logo"
@@ -48,18 +48,18 @@ export default function Footer() {
                         />
                     </Link>
 
-                    <div className="flex flex-wrap xl:flex-nowrap gap-8 xl:gap-10 justify-between w-full">
+                    <div className="flex flex-wrap lg:flex-nowrap gap-8 xl:gap-10 justify-between w-full">
                         {footerMenus?.map((menu) => (
-                            <div key={menu?.id} className="w-[48%] lg:w-full">
-                                <h4 className="text-sm uppercase text-white/50 font-extrabold tracking-[1.96px] leading-[1.71] mb-6">
+                            <div key={menu?.id} className="w-[28%] lg:w-full">
+                                <h4 className="text-xs lg:text-sm uppercase text-white/50 font-extrabold tracking-[1.96px] leading-[1.71] mb-4 lg:mb-6">
                                     {menu?.title}
                                 </h4>
                                 <ul>
                                     {menu?.links?.map((link) => (
-                                        <li key={link?.id} className="mb-4">
+                                        <li key={link?.id} className="mb-2 lg:mb-4 last:mb-0">
                                             <Link
                                                 href={link?.url}
-                                                className="text-lg font-normal text-white/60 leading-[1.15] transition-colors duration-200 ease-in-out hover:text-white"
+                                                className="text-sm md:text-base xl:text-lg font-normal text-white/60 leading-[1.15] transition-colors duration-200 ease-in-out hover:text-white"
                                             >
                                                 {link?.name}
                                             </Link>
@@ -70,14 +70,14 @@ export default function Footer() {
                         ))}
 
                         <div className="w-full">
-                            <h4 className="text-sm uppercase text-white/50 font-extrabold tracking-[1.96px] leading-[1.71] mb-6">
+                            <h4 className="text-xs lg:text-sm uppercase text-white/50 font-extrabold tracking-[1.96px] leading-[1.71] mb-6">
                                 Social
                             </h4>
                             <ul>
                                 <li className="mb-4">
                                     <Link
                                         href=""
-                                        className="text-lg font-normal text-white/60 leading-[1.15] transition-colors duration-200 ease-in-out hover:text-white flex items-center gap-2"
+                                        className="text-sm md:text-base xl:text-lg font-normal text-white/60 leading-[1.15] transition-colors duration-200 ease-in-out hover:text-white flex items-center gap-2"
                                     >
                                         <svg
                                             width="20"
@@ -98,7 +98,7 @@ export default function Footer() {
                                 <li className="mb-4">
                                     <Link
                                         href=""
-                                        className="text-lg font-normal text-white/60 leading-[1.15] transition-colors duration-200 ease-in-out hover:text-white flex items-center gap-2"
+                                        className="text-sm md:text-base xl:text-lg font-normal text-white/60 leading-[1.15] transition-colors duration-200 ease-in-out hover:text-white flex items-center gap-2"
                                     >
                                         <svg
                                             width="20"
@@ -127,7 +127,7 @@ export default function Footer() {
                                 <li className="mb-4">
                                     <Link
                                         href=""
-                                        className="text-lg font-normal text-white/60 leading-[1.15] transition-colors duration-200 ease-in-out hover:text-white flex items-center gap-2"
+                                        className="text-sm md:text-base xl:text-lg font-normal text-white/60 leading-[1.15] transition-colors duration-200 ease-in-out hover:text-white flex items-center gap-2"
                                     >
                                         <svg
                                             width="20"
@@ -194,24 +194,25 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-start gap-[30px] mt-16 mb-12">
-                    <div className="bg-white/5 rounded-full border-2 border-white/10 px-8 py-4 min-h-[118px] flex items-center">
-                        <div className="flex items-center gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-start gap-4 md:gap-6 lg:gap-[30px] mt-8 md:mt-12 xl:mt-16 mb-6 md:mb-8 lg:mb-10 xl:mb-12">
+                    <div className="bg-white/5 rounded-full border-2 border-white/10 px-4 lg:px-6 xl:px-8 py-3 lg:py-4 h-20 md:min-h-24 lg:min-h-[118px] flex items-center">
+                        <div className="flex items-center gap-4 md:gap-6">
                             <Image
                                 src="/images/email-icon.svg"
                                 alt="Email"
                                 width={30}
                                 height={30}
+                                className="w-6 md:w-7.5 h-6 md:h-7.5"
                             />
 
                             <div className="">
-                                <div className="text-base font-medium text-white/60 leading-[1.62] font-plus-jakarta-sans mb-1">
+                                <div className="text-sm md:text-base font-medium text-white/60 leading-[1.62] font-plus-jakarta-sans mb-1">
                                     Email
                                 </div>
 
                                 <Link
                                     href="mailto:feedback@lasertreat.com.bd"
-                                    className="text-base font-medium text-white leading-[1.15] transition-colors duration-200 ease-in-out hover:text-light-accent"
+                                    className="text-sm md:text-base font-medium text-white leading-[1.15] transition-colors duration-200 ease-in-out hover:text-light-accent"
                                 >
                                     feedback@lasertreat.com.bd
                                 </Link>
@@ -219,21 +220,22 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="bg-white/5 rounded-full border-2 border-white/10 px-8 py-4 min-h-[118px] flex items-center">
-                        <div className="flex items-center gap-6">
+                    <div className="bg-white/5 rounded-full border-2 border-white/10 px-4 lg:px-6 xl:px-8 py-3 lg:py-4 h-20 md:min-h-24 lg:min-h-[118px] flex items-center">
+                        <div className="flex items-center gap-4 md:gap-6">
                             <Image
                                 src="/images/address-icon.svg"
                                 alt="Email"
                                 width={30}
                                 height={30}
+                                className="w-6 md:w-7.5 h-6 md:h-7.5"
                             />
 
                             <div className="">
-                                <div className="text-base font-medium text-white/60 leading-[1.62] font-plus-jakarta-sans mb-1">
+                                <div className="text-sm md:text-base font-medium text-white/60 leading-[1.62] font-plus-jakarta-sans mb-1">
                                     Address
                                 </div>
 
-                                <p className="text-base font-medium text-white leading-[1.35] ">
+                                <p className="text-sm md:text-base font-medium text-white leading-[1.35] ">
                                     {`House: 56 (3rd Floor, The Laureate, Road: 11 Block: F,
                                             Dhaka 1213`}
                                 </p>
@@ -241,23 +243,24 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="bg-white/5 rounded-full border-2 border-white/10 px-8 py-4 min-h-[118px] flex items-center">
-                        <div className="flex items-center gap-6">
+                    <div className="bg-white/5 rounded-full border-2 border-white/10 px-4 lg:px-6 xl:px-8 py-3 lg:py-4 h-20 md:min-h-24 lg:min-h-[118px] flex items-center">
+                        <div className="flex items-center gap-4 md:gap-6">
                             <Image
                                 src="/images/phone-icon.svg"
                                 alt="Email"
                                 width={30}
                                 height={30}
+                                className="w-6 md:w-7.5 h-6 md:h-7.5"
                             />
 
                             <div className="">
-                                <div className="text-base font-medium text-white/60 leading-[1.62] font-plus-jakarta-sans mb-1">
+                                <div className="text-sm md:text-base font-medium text-white/60 leading-[1.62] font-plus-jakarta-sans mb-1">
                                     Email
                                 </div>
 
                                 <Link
                                     href="tel:+8801762817152"
-                                    className="text-base font-medium text-white leading-[1.15] transition-colors duration-200 ease-in-out hover:text-light-accent"
+                                    className="text-sm md:text-base font-medium text-white leading-[1.15] transition-colors duration-200 ease-in-out hover:text-light-accent"
                                 >
                                     +88 01762817152
                                 </Link>
@@ -266,7 +269,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <p className="opacity-50 font-normal text-center text-white text-xs tracking-[2.40px] leading-6 whitespace-nowrap py-4 border-t border-white/20">
+                <p className="opacity-50 font-normal text-center text-white text-[10px] sm:text-xs tracking-[2.40px] leading-[1.3] md:leading-6 md:whitespace-nowrap py-3 md:py-4 border-t border-white/20">
                     © 2025 DR. PROFESSOR DR. SARKER MAHBUB AHMED SHAMIM
                 </p>
             </div>
