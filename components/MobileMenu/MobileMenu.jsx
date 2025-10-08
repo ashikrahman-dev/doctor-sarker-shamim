@@ -35,7 +35,7 @@ export default function MobileMenu() {
                             <Link
                                 href={menu?.link}
                                 key={menu?.id}
-                                className="group relative py-1 px-1.5 sm:px-3 rounded-full bg-white/60 opacity-80 backdrop-blur-lg text-xs sm:text-sm font-bold uppercase transition-all duration-300 hover:bg-white hover:opacity-100 font-albert overflow-hidden"
+                                className="group relative py-0.5 sm:py-1 px-1.5 sm:px-3 rounded-full bg-white/60 opacity-80 backdrop-blur-lg text-xs sm:text-sm font-bold uppercase transition-all duration-300 hover:bg-white hover:opacity-100 font-albert overflow-hidden"
                             >
                                 <span className="block relative">
                                     <span className="block translate-y-0 group-hover:-translate-y-full transition-transform duration-300">
