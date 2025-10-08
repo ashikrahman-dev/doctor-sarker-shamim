@@ -29,13 +29,13 @@ export default function MobileMenu() {
                 className="fixed bottom-6 sm:bottom-8 md:bottom-12 w-fit p-2 sm:p-3 min-w-fit rounded-full bg-primary-main/15 backdrop-blur-sm left-1/2 -translate-x-1/2 z-60"
             >
                 {/* Mobile menu Button */}
-                <div className="flex gap-3 sm:gap-4 items-center justify-center h-full w-full">
-                    <div className="flex gap-2 sm:gap-3 items-center">
+                <div className="flex gap-2 sm:gap-4 items-center justify-center h-full w-full">
+                    <div className="flex gap-1.5 sm:gap-3 items-center">
                         {mobileMenu?.map((menu) => (
                             <Link
                                 href={menu?.link}
                                 key={menu?.id}
-                                className="group relative py-1 px-3 rounded-full bg-white/60 opacity-80 backdrop-blur-lg text-xs sm:text-sm font-bold uppercase transition-all duration-300 hover:bg-white hover:opacity-100 font-albert overflow-hidden"
+                                className="group relative py-1 px-1.5 sm:px-3 rounded-full bg-white/60 opacity-80 backdrop-blur-lg text-xs sm:text-sm font-bold uppercase transition-all duration-300 hover:bg-white hover:opacity-100 font-albert overflow-hidden"
                             >
                                 <span className="block relative">
                                     <span className="block translate-y-0 group-hover:-translate-y-full transition-transform duration-300">

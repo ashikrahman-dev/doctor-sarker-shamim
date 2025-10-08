@@ -9,7 +9,7 @@ export default function SubpageBanner({ data }) {
     };
 
     return (
-        <section className="bg-dark-8 pt-[180px] pb-16 md:pb-20 xl:pb-24 relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-[980px] before:h-full before:bg-[linear-gradient(270deg,rgba(247,231,208,0)_22.87%,#FFE4C2_62.4%)] after:absolute after:content-[''] after:right-0 after:top-0 after:w-[980px] after:h-full after:bg-[linear-gradient(90deg,rgba(247,231,208,0)_22.87%,#FFE4C2_62.4%)]">
+        <section className="bg-dark-8 pt-[180px] pb-16 md:pb-20 xl:pb-24 relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-[120px] sm:before:w-[220px] md:before:w-[420px] lg:before:w-[620px] 2xl:before:w-[980px] before:h-full before:bg-[linear-gradient(270deg,rgba(247,231,208,0)_22.87%,#FFE4C2_62.4%)] after:absolute after:content-[''] after:right-0 after:top-0 after:w-[120px] sm:after:w-[220px] md:after:w-[420px] lg:after:w-[620px] 2xl:after:w-[980px] after:h-full after:bg-[linear-gradient(90deg,rgba(247,231,208,0)_22.87%,#FFE4C2_62.4%)]">
             <div className="container z-10 relative">
                 <div className="text-center">
                     <span className="inline-flex text-xs lg:text-sm font-medium tracking-[0.14px] leading-[1.42] text-light-foreground px-4 py-1.75 bg-sky-blue rounded-full mb-3">
