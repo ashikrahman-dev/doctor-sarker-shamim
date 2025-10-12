@@ -119,7 +119,9 @@ export default function Header() {
                             className="bg-light-accent rounded-full py-3 lg:py-4 px-5 lg:px-8 text-light-foreground text-sm lg:text-base font-semibold leading-[1.2] lg:h-[58px] inline-flex gap-2 items-center group transition-colors duration-300 hover:bg-accent-bg cursor-pointer"
                         >
                             <span className="block sm:hidden">Appointment</span>
-                            <span className="hidden sm:block">Make An Appointment</span>
+                            <span className="hidden sm:block">
+                                Make An Appointment
+                            </span>
                             <svg
                                 width="21"
                                 height="20"

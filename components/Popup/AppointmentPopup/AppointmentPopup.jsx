@@ -44,7 +44,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                         </button>
 
                         <div className="text-center">
-                            <span className=" text-[10px] md:text-xs xl:text-sm font-medium tracking-[0.14px] leading-[1.42] text-light-foreground px-2 md:px-4 py-1 md:py-1.75 bg-sky-blue rounded-full mb-3 hidden md:inline-flex">
+                            <span className="text-[10px] md:text-xs xl:text-sm font-medium tracking-[0.14px] leading-[1.42] text-light-foreground px-2 md:px-4 py-1 md:py-1.75 bg-sky-blue rounded-full mb-3 hidden md:inline-flex">
                                 Transforming Lives, Redefining Beauty
                             </span>
                             <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-[42px] font-anton text-light-foreground leading-[1.2] max-w-[580px] mx-auto text-center pt-1 pb-4">

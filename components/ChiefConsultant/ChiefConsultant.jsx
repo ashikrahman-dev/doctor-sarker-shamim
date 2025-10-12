@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import AppointmentButton from "../Button/AppointmentButton/AppointmentButton";
 
 export default function ChiefConsultant() {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <section className="py-12 md:py-16 xl:py-20 2xl:py-24  bg-white overflow-hidden">
             <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 xl:gap-12 2xl:gap-16 items-center">
@@ -54,6 +59,7 @@ export default function ChiefConsultant() {
 
                     {/* CTA buttons (Right) */}
                     <div className="mt-8 xl:mt-10 2xl:mt-12 flex justify-center md:justify-start">
+                        {/* Popup Modal */}
                         <AppointmentButton />
                     </div>
                 </div>

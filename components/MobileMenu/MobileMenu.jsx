@@ -29,7 +29,7 @@ export default function MobileMenu() {
                 className="fixed bottom-6 sm:bottom-8 md:bottom-12 w-fit p-2 sm:p-3 min-w-fit rounded-full bg-primary-main/15 backdrop-blur-sm left-1/2 -translate-x-1/2 z-60"
             >
                 {/* Mobile menu Button */}
-                <div className="flex gap-2 sm:gap-4 items-center justify-center h-full w-full">
+                <div className="flex gap-2 sm:gap-3 items-center justify-center h-full w-full">
                     <div className="flex gap-1.5 sm:gap-3 items-center">
                         {mobileMenu?.map((menu) => (
                             <Link
@@ -51,7 +51,7 @@ export default function MobileMenu() {
 
                     <motion.button
                         onClick={() => setIsOpen((prev) => !prev)}
-                        className="w-7 h-7 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-lg cursor-pointer"
+                        className="w-6 h-6 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-lg cursor-pointer"
                         animate={{ rotate: isOpen ? 45 : 0 }}
                         transition={{ duration: 0.3 }}
                     >
