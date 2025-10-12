@@ -1,13 +1,33 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import ArticleCard from "../ArticleCard/ArticleCard";
 import DefaultCard from "../DefaultCard/DefaultCard";
 
 export default function NewsFilter({ data }) {
-    const itemsPerPage = 8; // 2x4 grid
+    const [itemsPerPage, setItemsPerPage] = useState(8);
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedCategory, setSelectedCategory] = useState("All");
+
+    // Update itemsPerPage based on screen size
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setItemsPerPage(3);
+            } else {
+                setItemsPerPage(8);
+            }
+        };
+
+        // Set initial value
+        handleResize();
+
+        // Add event listener
+        window.addEventListener("resize", handleResize);
+
+        // Cleanup
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     // Extract unique categories from data
     const categories = useMemo(() => {
