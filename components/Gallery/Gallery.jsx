@@ -8,7 +8,7 @@ const treatmentData = [
         id: 1,
         img: "/images/treatment-result-img-1.jpg",
         alt: "Professor of Dermatology",
-        category: "Training",
+        category: "PRESENTATION",
     },
     {
         id: 2,
@@ -62,7 +62,7 @@ const treatmentData = [
         id: 10,
         img: "/images/treatment-result-img-7.jpg",
         alt: "Professor of Dermatology",
-        category: "Training",
+        category: "PRESENTATION",
     },
 ];
 
