@@ -6,7 +6,7 @@ export const latestArticleData = [
         excerpt:
             "COSDERMINDIA 2024, 27th Annual Congress of Cosmetic Dermatology Society India (CDSI), Mumbai, India",
         date: "1 to 3 Aug, 2024",
-        category: "SEMINAR, SYMPOSIUM, CONFERENCE",
+        category: "Events",
         author: "Pro. Dr. S M A Shamim",
         designation: "INDIA",
         authorImg: "/images/india.png",
@@ -32,7 +32,7 @@ export const latestArticleData = [
         excerpt:
             "DSCON 2024, 10th International Conference & Live Demonstration Arranged by Society of Dermatologic Surgeons of Bangladesh (SDSB), InterContinental, Dhaka",
         date: "7 May, 2024",
-        category: "SEMINAR, SYMPOSIUM, CONFERENCE",
+        category: "Events",
         author: "Pro. Dr. S M A Shamim",
         designation: "DHAKA",
         authorImg: "/images/bangladesh-flag.svg",
@@ -45,7 +45,7 @@ export const latestArticleData = [
         excerpt:
             "AMWC 2023, 21st Aesthetic & Anti-Aging Medicine World Congress – The World`s Largest Event for “Global Aging Management”, Montecarlo, Monaco",
         date: "28 Feb, 2022",
-        category: "SEMINAR, SYMPOSIUM, CONFERENCE",
+        category: "Events",
         author: "Pro. Dr. S M A Shamim",
         designation: "MONACO",
         authorImg: "/images/monaco-flag.svg",
@@ -57,7 +57,7 @@ export const latestArticleData = [
         title: "Annals of International Medical and Dental Research",
         excerpt: "DERMA MeDeCON 2024 by SAARC AAD In UAE, Conrad, Dubai",
         date: "10 May, 2024",
-        category: "SEMINAR, SYMPOSIUM, CONFERENCE",
+        category: "Events",
         author: "Pro. Dr. S M A Shamim",
         designation: "DHAKA",
         authorImg: "/images/bangladesh-flag.svg",
@@ -109,7 +109,7 @@ export const latestArticleData = [
         excerpt:
             "Approaching a Sad Face Presented in SAARC AAD In UAE, Aesthetic Evolution: A SAARC Perspective, World Trade Centre, Dubai – United Arab Emirates",
         date: "22 Sep 2023",
-        category: "PANELIST, MODERATOR & WORKSHOP",
+        category: "Training",
         author: "Pro. Dr. S M A Shamim",
         designation: "DUBAI",
         authorImg: "/images/author-image.png",
@@ -122,7 +122,7 @@ export const latestArticleData = [
         excerpt:
             "BIOLOGICS in Psoriasis : Bangladesh Scenario & My Approach to Treat Sad Face Presented in BANGLADERMA 2023, Siliguri, Darjeeling, West Bengal, India",
         date: "16 to 18 Jun 2023",
-        category: "PANELIST, MODERATOR & WORKSHOP",
+        category: "Training",
         author: "Pro. Dr. S M A Shamim",
         designation: "INDIA",
         authorImg: "/images/india.png",
@@ -135,7 +135,7 @@ export const latestArticleData = [
         excerpt:
             "La Aesthetica – LEARN FROM THE EXPERTS – SAARC Association of Aesthetic Dermatology, LP VILAS, Dehradun, India",
         date: "8 to 9 April 2023",
-        category: "PANELIST, MODERATOR & WORKSHOP",
+        category: "Training",
         author: "Pro. Dr. S M A Shamim",
         designation: "INDIA",
         authorImg: "/images/india.png",
@@ -148,7 +148,7 @@ export const latestArticleData = [
         excerpt:
             "FUE ASIA 2023 – Medical & Regenerative Trichology FUE Hair Transplant Workshop, The Leela Ambience, Gurugram, India",
         date: "09 to 11 Mar, 2023",
-        category: "PANELIST, MODERATOR & WORKSHOP",
+        category: "Training",
         author: "Pro. Dr. S M A Shamim",
         designation: "INDIA",
         authorImg: "/images/india.png",
@@ -161,7 +161,7 @@ export const latestArticleData = [
         excerpt:
             "4th International Conference on Psoriasis & Inflammatory Skin Disorders (In collaboration with SPIN Network) Evolving Knowledge of Chronic Inflammatory Skin Disorders by Psoriasis Awareness Club, Ballroom, Pan Pacific Sonargaon, Dhaka",
         date: "9 Feb 2023",
-        category: "PANELIST, MODERATOR & WORKSHOP",
+        category: "Training",
         author: "Pro. Dr. S M A Shamim",
         designation: "BANGLADESH",
         authorImg: "/images/bangladesh-flag.svg",
@@ -173,7 +173,7 @@ export const latestArticleData = [
         title: "Pediatric Dermatology",
         excerpt: "Dubai Derma 2024, Dubai, UAE",
         date: "5 to 7 Jun, 2024",
-        category: "SEMINAR, SYMPOSIUM, CONFERENCE",
+        category: "Events",
         author: "Pro. Dr. S M A Shamim",
         designation: "UAE",
         authorImg: "/images/author-image.png",

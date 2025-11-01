@@ -88,7 +88,7 @@ export default function NewsFilter({ data }) {
                         <button
                             key={category}
                             onClick={() => handleCategoryChange(category)}
-                            className={`px-4 md:px-6 py-2 md:py-3 shrink-0 rounded-full text-xs md:text-sm tracking-wide font-semibold transition-all duration-300 cursor-pointer border  ${
+                            className={`px-4 md:px-6 py-2 md:py-3 shrink-0 rounded-full text-xs md:text-sm tracking-wide font-semibold transition-all duration-300 cursor-pointer border uppercase  ${
                                 selectedCategory === category
                                     ? "bg-light-accent text-white shadow-md border-light-accent"
                                     : "bg-white text-light-foreground border-light-foreground hover:bg-light-accent hover:text-white hover:border-light-accent"
