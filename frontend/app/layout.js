@@ -1,0 +1,39 @@
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
+import MobileMenu from "@/components/MobileMenu/MobileMenu";
+import { Anton, Plus_Jakarta_Sans } from "next/font/google";
+import "./globals.css";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+    variable: "--font-plus-jakarta-sans",
+    subsets: ["latin"],
+});
+
+const anton = Anton({
+    variable: "--font-anton",
+    subsets: ["latin"],
+    weight: ["400"],
+});
+
+export const metadata = {
+    title: "Dr. Shamim",
+    description: "Transforming Lives, Redefining Beauty",
+    icons: {
+        icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    },
+};
+
+export default function RootLayout({ children }) {
+    return (
+        <html lang="en">
+            <body
+                className={`${anton.variable} ${plusJakartaSans.variable}  antialiased`}
+            >
+                <Header />
+                <MobileMenu />
+                {children}
+                <Footer />
+            </body>
+        </html>
+    );
+}
