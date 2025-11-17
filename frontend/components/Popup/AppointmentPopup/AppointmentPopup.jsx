@@ -278,10 +278,10 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                                     </div>
 
                                     {/* Phone Number Field */}
-                                    <div className="sm:col-span-2">
+                                    <div>
                                         <label
                                             htmlFor="phone-number"
-                                            className={`block text-xs md:text-sm font-semibold mb-2 ${
+                                            className={`block text-xs md:text-sm font-semibold text-start mb-2 ${
                                                 formState?.zodErrors?.phone
                                                     ? "text-red-500"
                                                     : "text-dark"
@@ -290,7 +290,7 @@ export default function AppointmentPopup({ isOpen, onClose }) {
                                             Mobile Number
                                         </label>
                                         <div className="mt-2.5">
-                                            <div className="flex rounded-md bg-dark-7 outline-1 -outline-offset-1 outline-white/10 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-500">
+                                            <div className="flex rounded-md bg-dark-7 ">
                                                 <input
                                                     id="phone-number"
                                                     name="phone-number"
