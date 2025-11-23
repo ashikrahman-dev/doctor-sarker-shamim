@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_banenrs",
+  "info": {
+    "singularName": "home-banenr",
+    "pluralName": "home-banenrs",
+    "displayName": "Home Banenr"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "doctor_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "patient_served_title": {
+      "type": "string"
+    },
+    "patient_served_number": {
+      "type": "string"
+    },
+    "experience_title": {
+      "type": "string"
+    },
+    "experience_years": {
+      "type": "integer"
+    },
+    "short_description": {
+      "type": "string"
+    }
+  }
+}

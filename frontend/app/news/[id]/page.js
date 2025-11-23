@@ -26,9 +26,12 @@ export default async function SingleNews({ params }) {
         authorImg,
     } = news;
 
+    console.log("News Data:", news);
+
     const subBannerContent = {
         sub_title: date,
         title: title,
+        category,
         description: excerpt,
         buttonLabel: "Make An Appointment",
         cta_text: "Get in Touch",

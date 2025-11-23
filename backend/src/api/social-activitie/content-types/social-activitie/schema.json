@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "social_activities",
+  "info": {
+    "singularName": "social-activitie",
+    "pluralName": "social-activities",
+    "displayName": "Social Activitie"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "social_media_name": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

@@ -1,10 +1,16 @@
 export default function SingleBlogBanner({ data }) {
-    const { sub_title, title, description, cta_url, cta_text } = data;
+    const { sub_title, title, description, cta_url, cta_text, category } = data;
+
+    console.log("Categories in SingleBlogBanner:", data);
 
     return (
         <section className="bg-dark-8 pt-[220px] pb-[100px] relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-[980px] before:h-full before:bg-[linear-gradient(270deg,rgba(247,231,208,0)_22.87%,#FFE4C2_62.4%)] after:absolute after:content-[''] after:right-0 after:top-0 after:w-[980px] after:h-full after:bg-[linear-gradient(90deg,rgba(247,231,208,0)_22.87%,#FFE4C2_62.4%)]">
             <div className="container z-10 relative">
-                <div className="text-center">
+                <div className="text-center flex flex-col items-center">
+                    <p className="mb-4.5 bg-accent-bg inline-block px-3 rounded-full capitalize font-medium">
+                        {category.toLowerCase()}
+                    </p>
+
                     <span className="inline-flex text-xs lg:text-sm font-medium tracking-[0.14px] leading-[1.42] text-light-foreground px-4 py-1.75 bg-sky-blue rounded-full mb-4 gap-2">
                         <svg
                             width="21"
@@ -23,7 +29,6 @@ export default function SingleBlogBanner({ data }) {
                     <h1 className="text-2xl xl:text-3xl 2xl:text-5xl text-light-foreground leading-[1.3] font-normal font-anton">
                         {title}
                     </h1>
-
                     <p className="text-base xl:text-xl text-light-foreground/70 leading-[1.5] mt-4 max-w-[810px] mx-auto">
                         {description}
                     </p>
