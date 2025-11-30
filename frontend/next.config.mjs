@@ -10,12 +10,12 @@ const nextConfig = {
             },
             {
                 protocol: "https",
-                hostname: "smiling-kindness-dfdd723bc6.media.strapiapp.com", // Your production Strapi domain
+                hostname: "humble-hero-0bd6231463.media.strapiapp.com", // Your production Strapi domain
                 // pathname: "/uploads/**",
             },
             {
                 protocol: "https",
-                hostname: "informed-leader-af23a960ab.media.strapiapp.com", // Your production Strapi domain
+                hostname: "smiling-kindness-dfdd723bc6.media.strapiapp.com", // Your production Strapi domain
                 // pathname: "/uploads/**",
             },
         ],
