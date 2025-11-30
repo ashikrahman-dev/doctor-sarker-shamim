@@ -3,46 +3,11 @@
 // import Splide from "@splidejs/splide";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-import Image from "next/image";
 
 import "@splidejs/splide/css";
+import { StrapiImage } from "../StrapiImage/StrapiImage";
 
-const myAchievementData = [
-    {
-        id: 1,
-        logo: "/images/achievement-logo-1.svg",
-    },
-    {
-        id: 2,
-        logo: "/images/achievement-logo-2.svg",
-    },
-    {
-        id: 3,
-        logo: "/images/achievement-logo-3.svg",
-    },
-    {
-        id: 4,
-        logo: "/images/achievement-logo-4.svg",
-    },
-    {
-        id: 5,
-        logo: "/images/achievement-logo-5.svg",
-    },
-    {
-        id: 6,
-        logo: "/images/achievement-logo-6.svg",
-    },
-    {
-        id: 7,
-        logo: "/images/achievement-logo-7.svg",
-    },
-    {
-        id: 8,
-        logo: "/images/achievement-logo-8.svg",
-    },
-];
-
-export default function MyAchievements() {
+export default function MyAchievements({ data }) {
     return (
         <section className="py-12 md:py-16 xl:py-20 2xl:py-24 bg-dark overflow-hidden">
             <div className="container">
@@ -94,10 +59,10 @@ export default function MyAchievements() {
                     }}
                     className="flex"
                 >
-                    {myAchievementData.map((slide) => (
+                    {data?.map((slide) => (
                         <SplideSlide key={slide.id}>
-                            <Image
-                                src={slide.logo}
+                            <StrapiImage
+                                src={slide?.image?.url}
                                 alt="Brand Logo"
                                 width={220}
                                 height={100}

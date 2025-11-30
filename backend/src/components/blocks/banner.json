@@ -1,15 +1,10 @@
 {
-  "kind": "singleType",
-  "collectionName": "home_banenrs",
+  "collectionName": "components_blocks_banners",
   "info": {
-    "singularName": "home-banenr",
-    "pluralName": "home-banenrs",
-    "displayName": "Home Banenr"
+    "displayName": "Banner",
+    "icon": "picture"
   },
-  "options": {
-    "draftAndPublish": true
-  },
-  "pluginOptions": {},
+  "options": {},
   "attributes": {
     "tagline": {
       "type": "string"
@@ -31,7 +26,7 @@
       "type": "string"
     },
     "patient_served_number": {
-      "type": "string"
+      "type": "integer"
     },
     "experience_title": {
       "type": "string"
@@ -40,7 +35,8 @@
       "type": "integer"
     },
     "short_description": {
-      "type": "string"
+      "type": "text"
     }
-  }
+  },
+  "config": {}
 }

@@ -21,15 +21,16 @@
         "images"
       ]
     },
-    "date": {
-      "type": "date"
-    },
     "gallery": {
       "type": "media",
       "multiple": true,
       "allowedTypes": [
         "images"
       ]
+    },
+    "date": {
+      "type": "string",
+      "required": true
     }
   }
 }

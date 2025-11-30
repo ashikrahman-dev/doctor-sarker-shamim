@@ -21,9 +21,11 @@
       "type": "string"
     },
     "blocks": {
-      "type": "component",
-      "component": "section.chief-consultant",
-      "repeatable": true
+      "type": "dynamiczone",
+      "components": [
+        "blocks.banner",
+        "section.chief-consultant"
+      ]
     }
   }
 }

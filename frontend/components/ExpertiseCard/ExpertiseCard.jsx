@@ -3,37 +3,10 @@
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
-import Image from "next/image";
+import { StrapiImage } from "../StrapiImage/StrapiImage";
 
-const expertiseData = [
-    {
-        id: 1,
-        img: "/images/my-expertise-img-1.jpg",
-        name: "Aesthetic Dermatology & Cosmetic Surgery",
-    },
-    {
-        id: 2,
-        img: "/images/my-expertise-img-2.jpg",
-        name: "Laser & Dermatosurgery",
-    },
-    {
-        id: 3,
-        img: "/images/my-expertise-img-3.jpg",
-        name: "Hair Transplantation",
-    },
-    {
-        id: 4,
-        img: "/images/my-expertise-img-4.jpg",
-        name: "Skin, Sex & Anti Aging Specialist",
-    },
-    {
-        id: 5,
-        img: "/images/my-expertise-img-5.jpg",
-        name: "Medical Dermatology / Therapeutic Treatments",
-    },
-];
+export default function ExpertiseCard({ data }) {
 
-export default function ExpertiseCard() {
     return (
         <div className="">
             {/* Single card */}
@@ -75,23 +48,26 @@ export default function ExpertiseCard() {
                     }}
                 >
                     <SplideTrack>
-                        {expertiseData?.map((expertise) => (
+                        {data?.map((expertise) => (
                             <SplideSlide
                                 className="pt-2 pb-8"
                                 key={expertise?.id}
                             >
                                 <div className="min-h-[350px] rounded-2xl overflow-hidden relative">
                                     {/* Image */}
-                                    <Image
-                                        src={expertise?.img}
-                                        alt={expertise?.name}
+                                    <StrapiImage
+                                        src={expertise?.image?.url}
+                                        alt={
+                                            expertise?.image?.alternativeText ||
+                                            "expertise"
+                                        }
                                         width={500}
                                         height={500}
                                         className="absolute top-0 left-0 w-full h-full object-cover -z-0"
                                     />
                                     <div className="bg-[linear-gradient(177deg,rgba(40,33,23,0)_10.92%,#282117_91.26%)] px-6 pb-11 pt-12.5 z-0 absolute bottom-0 left-0 right-0 flex items-end justify-center md:justify-end">
                                         <h4 className="text-white font-anton text-2xl uppercase tracking-[1.32] text-center md:text-left">
-                                            {expertise?.name}
+                                            {expertise?.title}
                                         </h4>
                                     </div>
                                 </div>

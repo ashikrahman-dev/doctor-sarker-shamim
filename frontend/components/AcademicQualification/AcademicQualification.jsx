@@ -1,78 +1,15 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 import { useState } from "react";
+import { StrapiImage } from "../StrapiImage/StrapiImage";
 
-const certificationData = [
-    {
-        id: 1,
-        img: "/images/achievement-placeholder-img.svg",
-        title: "Post Graduate Education",
-        degree: "FCPS (Dermatology) 2014",
-        institute: "Bangladesh College of Physician and Surgeons",
-    },
-    {
-        id: crypto.randomUUID(),
-        img: "/images/achievement-placeholder-img.svg",
-        title: "Post Graduate Education",
-        degree: "Diploma in Dermatology (Dip Derm) 2014",
-        institute: "Royal College of Physician and Surgeons of Glasgow, UK",
-    },
-    {
-        id: crypto.randomUUID(),
-        img: "/images/achievement-placeholder-img.svg",
-        title: "Post Graduate Education",
-        degree: "MCPS (Dermatology) 2009",
-        institute: "Bangladesh College of Physician and Surgeons",
-    },
-    {
-        id: crypto.randomUUID(),
-        img: "/images/achievement-placeholder-img.svg",
-        title: "Post Graduate Education",
-        degree: "AAAM Board Certification 2019",
-        institute: "Board Certified Aesthetic Dermatologist (AAAM)",
-    },
-    {
-        id: crypto.randomUUID(),
-        img: "/images/achievement-placeholder-img.svg",
-        title: "Post Graduate Education",
-        degree: "Diploma in Aesthetic Medicine 2016",
-        institute: "American Academy of Aesthetic Medicine, USA",
-    },
-    {
-        id: crypto.randomUUID(),
-        img: "/images/achievement-placeholder-img.svg",
-        title: "Post Graduate Education",
-        degree: "FCGP 2002",
-        institute: "The College of General Practitioners of Bangladesh",
-    },
-    {
-        id: crypto.randomUUID(),
-        img: "/images/achievement-placeholder-img.svg",
-        title: "Graduation",
-        degree: "MBBS 1999",
-        institute: "Institute of Applied Health Sciences",
-        faculty: "Faculty of Medicine, University of Chittagong",
-    },
-    {
-        id: crypto.randomUUID(),
-        img: "/images/achievement-placeholder-img.svg",
-        title: "Undergraduate Education",
-        degree: "Higher Secondary School Certificate 1990",
-        institute: "Govt. Hazi Muhammad Muhsin College",
-    },
-];
-
-export default function Achievements() {
+export default function AcademicQualification({ data }) {
     const itemsPerPage = 3;
     const [currentPage, setCurrentPage] = useState(1);
 
-    const totalPages = Math.ceil(certificationData.length / itemsPerPage);
+    const totalPages = Math.ceil(data?.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
-    const currentItems = certificationData.slice(
-        startIndex,
-        startIndex + itemsPerPage
-    );
+    const currentItems = data?.slice(startIndex, startIndex + itemsPerPage);
 
     return (
         <section className="py-12 md:py-16 xl:py-20 2xl:py-24 bg-accent-bg overflow-hidden">
@@ -87,24 +24,24 @@ export default function Achievements() {
                 {/* Certification Items with Animation */}
                 <AnimatePresence mode="wait">
                     <motion.div
-                        key={currentPage} // triggers animation on page change
-                        initial={{ opacity: 0, x: 50 }} // start slightly right
-                        animate={{ opacity: 1, x: 0 }} // slide to position
-                        exit={{ opacity: 0, x: -50 }} // exit to left
+                        key={currentPage}
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -50 }}
                         transition={{
                             duration: 0.5,
                             ease: [0.25, 0.1, 0.25, 1],
                         }}
                         className="flex flex-col gap-6"
                     >
-                        {currentItems.map((training) => (
+                        {currentItems?.map((training) => (
                             <div
                                 key={training.id}
                                 className="p-2.5 bg-white rounded-3xl shadow-[0px_24px_48px_0px_rgba(12,14,58,0.04)] grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-6 items-center"
                             >
                                 <div className="col-span-1 md:col-span-4">
-                                    <Image
-                                        src={training.img}
+                                    <StrapiImage
+                                        src={training?.image?.url}
                                         alt="certification image"
                                         width={440}
                                         height={280}
@@ -114,16 +51,11 @@ export default function Achievements() {
                                 <div className="col-span-1 md:col-span-8">
                                     <div className="p-4 md:p-6">
                                         <h2 className="text-xl md:text-2xl xl:text-3xl text-light-foreground font-anton leading-[1.3] font-normal mb-3">
-                                            {training.title}
+                                            {training?.degree}
                                         </h2>
                                         <h3 className="text-base md:text-lg lg:text-xl font-semibold text-light-foreground">
-                                            {training.degree}
+                                            {training?.department}
                                         </h3>
-                                        {training?.faculty && (
-                                            <h4 className="text-base md:text-lg lg:text-xl font-semibold text-light-foreground mt-2">
-                                                {training.faculty}
-                                            </h4>
-                                        )}
                                         <div className="mt-4 flex gap-4 items-center text-sm md:text-base xl:text-lg text-light-foreground/70">
                                             <svg
                                                 width="24"
@@ -137,7 +69,7 @@ export default function Achievements() {
                                                     fill="#060C22"
                                                 />
                                             </svg>
-                                            {training.institute}
+                                            {training?.institute}
                                         </div>
                                     </div>
                                 </div>
@@ -153,11 +85,11 @@ export default function Achievements() {
                         onClick={() =>
                             setCurrentPage((prev) => Math.max(prev - 1, 1))
                         }
-                        className="rounded-full bg-[#33f23333] hover:bg-light-accent transition-colors duration-300 cursor-pointer w-12 xl:w-[68px] h-12 xl:h-[68px] flex items-center justify-center"
+                        className="rounded-full bg-[#33f23333] hover:bg-light-accent transition-colors duration-300 cursor-pointer w-12 xl:w-[68px] h-12 xl:h-[68px] flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={currentPage === 1}
                     >
                         <svg
-                            className=" transform rotate-180 w-5 md:w-6 h-5 md:h-6"
+                            className="transform rotate-180 w-5 md:w-6 h-5 md:h-6"
                             width="25"
                             height="24"
                             viewBox="0 0 25 24"
@@ -193,7 +125,7 @@ export default function Achievements() {
                                 Math.min(prev + 1, totalPages)
                             )
                         }
-                        className="rounded-full bg-[#33f23333] hover:bg-light-accent transition-colors duration-300 cursor-pointer w-12 xl:w-[68px] h-12 xl:h-[68px] flex items-center justify-center"
+                        className="rounded-full bg-[#33f23333] hover:bg-light-accent transition-colors duration-300 cursor-pointer w-12 xl:w-[68px] h-12 xl:h-[68px] flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={currentPage === totalPages}
                     >
                         <svg

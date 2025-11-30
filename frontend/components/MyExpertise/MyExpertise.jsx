@@ -1,6 +1,6 @@
 import ExpertiseCard from "../ExpertiseCard/ExpertiseCard";
 
-export default function MyExpertise() {
+export default function MyExpertise({ data }) {
     return (
         <section className="py-12 md:py-16 xl:py-20 2xl:py-24 bg-dark-8 overflow-hidden">
             <div className="container">
@@ -13,7 +13,7 @@ export default function MyExpertise() {
 
                 {/* Expertise card wrapper */}
                 <div className="">
-                    <ExpertiseCard />
+                    <ExpertiseCard data={data} />
                 </div>
             </div>
         </section>

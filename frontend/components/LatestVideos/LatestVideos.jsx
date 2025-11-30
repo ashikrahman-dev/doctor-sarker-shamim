@@ -2,67 +2,41 @@
 
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import Image from "next/image";
 import { useRef, useState } from "react";
+import { StrapiImage } from "../StrapiImage/StrapiImage";
 
-const latestVideos = [
-    {
-        id: crypto.randomUUID(),
-        poster: "/images/video-poster-img.png",
-        videoUrl:
-            "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-        title: "Sample Video 1",
-    },
-    {
-        id: crypto.randomUUID(),
-        poster: "/images/video-poster-img.png",
-        videoUrl:
-            "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-        title: "Sample Video 2",
-    },
-    {
-        id: crypto.randomUUID(),
-        poster: "/images/video-poster-img.png",
-        videoUrl:
-            "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-        title: "Sample Video 3",
-    },
-];
+// YouTube URL থেকে Video ID extract করার function
+const getYouTubeVideoId = (url) => {
+    if (!url) return null;
 
-export default function LatestVideos() {
+    // Different YouTube URL formats handle করা
+    const patterns = [
+        /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
+        /^([a-zA-Z0-9_-]{11})$/,
+    ];
+
+    for (const pattern of patterns) {
+        const match = url.match(pattern);
+        if (match) return match[1];
+    }
+
+    return null;
+};
+
+export default function LatestVideos({ data }) {
     const [playingVideo, setPlayingVideo] = useState(null);
-    const [wasPlaying, setWasPlaying] = useState(false);
     const videoRefs = useRef({});
 
-    const handlePlayVideo = (videoId, videoUrl) => {
-        if (playingVideo && videoRefs.current[playingVideo]) {
-            videoRefs.current[playingVideo].pause();
-        }
-
+    const handlePlayVideo = (videoId) => {
         setPlayingVideo(videoId);
-
-        setTimeout(() => {
-            if (videoRefs.current[videoId]) {
-                videoRefs.current[videoId].play();
-            }
-        }, 100);
     };
 
-    const handleVideoEnded = () => {
+    const handleCloseVideo = () => {
         setPlayingVideo(null);
-        setWasPlaying(false);
-    };
-
-    const handleVideoPlay = () => {
-        setWasPlaying(true);
-    };
-
-    const handleVideoPause = () => {
-        setWasPlaying(false);
     };
 
     return (
-        <div className="py-12 md:py-16 xl:py-20 2xl:py-24  overflow-hidden bg-[linear-gradient(180deg,rgba(255,211,156,1)_0%,rgba(255,250,244,1)_100%)]">
+        <div className="py-12 md:py-16 xl:py-20 2xl:py-24 overflow-hidden bg-[linear-gradient(180deg,rgba(255,211,156,1)_0%,rgba(255,250,244,1)_100%)]">
             <div className="container">
                 {/* Section Heading */}
                 <div className="text-center max-w-[720px] 2xl:max-w-[854px] mx-auto">
@@ -94,112 +68,120 @@ export default function LatestVideos() {
                         }}
                     >
                         <SplideTrack>
-                            {latestVideos?.map((slide) => (
-                                <SplideSlide
-                                    className="pt-2 pb-4"
-                                    key={slide?.id}
-                                >
-                                    <div className="relative rounded-4xl overflow-hidden pb-12">
-                                        {playingVideo === slide.id ? (
-                                            // Video Player
-                                            <video
-                                                ref={(el) =>
-                                                    (videoRefs.current[
-                                                        slide.id
-                                                    ] = el)
-                                                }
-                                                className="w-full h-auto rounded-4xl"
-                                                controls
-                                                poster={slide.poster}
-                                                onEnded={handleVideoEnded}
-                                                onPause={handleVideoPause}
-                                                onPlay={handleVideoPlay}
-                                                style={{ maxHeight: "590px" }}
-                                                onSeeking={(e) => {
-                                                    setWasPlaying(
-                                                        !e.target.paused
-                                                    );
-                                                }}
-                                                onSeeked={(e) => {
-                                                    if (wasPlaying) {
-                                                        e.target
-                                                            .play()
-                                                            .catch(() => {});
-                                                    }
-                                                    setTimeout(
-                                                        () =>
-                                                            setWasPlaying(
-                                                                false
-                                                            ),
-                                                        200
-                                                    );
-                                                }}
-                                            >
-                                                <source
-                                                    src={slide.videoUrl}
-                                                    type="video/mp4"
-                                                />
-                                                Your browser does not support
-                                                the video tag.
-                                            </video>
-                                        ) : (
-                                            // Poster with Play Button
-                                            <>
+                            {data?.map((slide) => {
+                                const videoId = getYouTubeVideoId(
+                                    slide?.video_url
+                                );
+
+                                return (
+                                    <SplideSlide
+                                        className="pt-2 pb-4"
+                                        key={slide?.id}
+                                    >
+                                        <div className="relative rounded-4xl overflow-hidden pb-12">
+                                            {playingVideo === slide.id ? (
+                                                // YouTube Video Player
                                                 <div
-                                                    className="play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer z-10"
-                                                    onClick={() =>
-                                                        handlePlayVideo(
-                                                            slide.id,
-                                                            slide.videoUrl
-                                                        )
-                                                    }
+                                                    className="relative w-full"
+                                                    style={{
+                                                        paddingBottom: "56.25%",
+                                                    }}
                                                 >
-                                                    <div className="button is-play">
-                                                        <div className="button-outer-circle has-scale-animation"></div>
-                                                        <div className="button-outer-circle has-scale-animation has-delay-short"></div>
-                                                        <div className="button-icon is-play">
-                                                            <svg
-                                                                height="100%"
-                                                                width="100%"
-                                                                viewBox="0 0 130 130"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                            >
-                                                                <g opacity="0.8">
-                                                                    <path
-                                                                        className="path"
-                                                                        d="M64.9997 119.165C35.0842 119.165 10.833 94.9139 10.833 64.9987C10.833 35.0833 35.0842 10.832 64.9997 10.832C94.9148 10.832 119.166 35.0833 119.166 64.9987C119.166 94.9139 94.9148 119.165 64.9997 119.165ZM57.535 45.5777C57.1791 45.3404 56.7609 45.2138 56.333 45.2138C55.1365 45.2138 54.1663 46.1839 54.1663 47.3805V82.617C54.1663 83.0449 54.2931 83.463 54.5303 83.8189C55.1939 84.8145 56.5394 85.0837 57.535 84.4196L83.9623 66.8014C84.2001 66.6427 84.4043 66.4384 84.5631 66.2007C85.2271 65.2051 84.9579 63.8596 83.9623 63.196L57.535 45.5777Z"
-                                                                        fill="white"
-                                                                    />
-                                                                </g>
-                                                            </svg>
+                                                    <iframe
+                                                        ref={(el) =>
+                                                            (videoRefs.current[
+                                                                slide.id
+                                                            ] = el)
+                                                        }
+                                                        className="absolute top-0 left-0 w-full h-full rounded-4xl"
+                                                        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+                                                        title={
+                                                            slide?.title ||
+                                                            "YouTube video"
+                                                        }
+                                                        frameBorder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowFullScreen
+                                                    />
+                                                    {/* Close button */}
+                                                    <button
+                                                        onClick={
+                                                            handleCloseVideo
+                                                        }
+                                                        className="absolute -top-2 -right-2 z-20 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
+                                                        aria-label="Close video"
+                                                    >
+                                                        <svg
+                                                            width="20"
+                                                            height="20"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path
+                                                                d="M18 6L6 18M6 6L18 18"
+                                                                stroke="#060C22"
+                                                                strokeWidth="2"
+                                                                strokeLinecap="round"
+                                                                strokeLinejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            ) : (
+                                                // Poster with Play Button
+                                                <>
+                                                    <div
+                                                        className="play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer z-10"
+                                                        onClick={() =>
+                                                            handlePlayVideo(
+                                                                slide.id
+                                                            )
+                                                        }
+                                                    >
+                                                        <div className="button is-play">
+                                                            <div className="button-outer-circle has-scale-animation"></div>
+                                                            <div className="button-outer-circle has-scale-animation has-delay-short"></div>
+                                                            <div className="button-icon is-play">
+                                                                <svg
+                                                                    height="100%"
+                                                                    width="100%"
+                                                                    viewBox="0 0 130 130"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                    <g opacity="0.8">
+                                                                        <path
+                                                                            className="path"
+                                                                            d="M64.9997 119.165C35.0842 119.165 10.833 94.9139 10.833 64.9987C10.833 35.0833 35.0842 10.832 64.9997 10.832C94.9148 10.832 119.166 35.0833 119.166 64.9987C119.166 94.9139 94.9148 119.165 64.9997 119.165ZM57.535 45.5777C57.1791 45.3404 56.7609 45.2138 56.333 45.2138C55.1365 45.2138 54.1663 46.1839 54.1663 47.3805V82.617C54.1663 83.0449 54.2931 83.463 54.5303 83.8189C55.1939 84.8145 56.5394 85.0837 57.535 84.4196L83.9623 66.8014C84.2001 66.6427 84.4043 66.4384 84.5631 66.2007C85.2271 65.2051 84.9579 63.8596 83.9623 63.196L57.535 45.5777Z"
+                                                                            fill="white"
+                                                                        />
+                                                                    </g>
+                                                                </svg>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <Image
-                                                    src={
-                                                        slide?.poster ||
-                                                        "/images/video-poster-img.png"
-                                                    }
-                                                    alt={
-                                                        slide?.title ||
-                                                        "Video Poster"
-                                                    }
-                                                    width={1470}
-                                                    height={590}
-                                                    className="w-full h-auto rounded-4xl cursor-pointer"
-                                                    onClick={() =>
-                                                        handlePlayVideo(
-                                                            slide.id,
-                                                            slide.videoUrl
-                                                        )
-                                                    }
-                                                />
-                                            </>
-                                        )}
-                                    </div>
-                                </SplideSlide>
-                            ))}
+                                                    <StrapiImage
+                                                        src={slide?.poster?.url}
+                                                        alt={
+                                                            slide?.title ||
+                                                            "Video Poster"
+                                                        }
+                                                        width={1470}
+                                                        height={590}
+                                                        className="w-full h-auto rounded-4xl cursor-pointer"
+                                                        onClick={() =>
+                                                            handlePlayVideo(
+                                                                slide.id
+                                                            )
+                                                        }
+                                                    />
+                                                </>
+                                            )}
+                                        </div>
+                                    </SplideSlide>
+                                );
+                            })}
                         </SplideTrack>
 
                         <div className="splide__arrows">

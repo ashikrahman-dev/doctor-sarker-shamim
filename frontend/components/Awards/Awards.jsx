@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import AwardDetails from "../Popup/AwardDetails/AwardDetails";
+import { StrapiImage } from "../StrapiImage/StrapiImage";
 
 const awardsData = [
     {
@@ -44,7 +44,7 @@ const awardsData = [
 ];
 
 // Main Awards Component
-export default function Awards() {
+export default function Awards({ data }) {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [selectedAward, setSelectedAward] = useState(null);
 
@@ -70,21 +70,24 @@ export default function Awards() {
                     </div>
                     {/* Awards Card */}
                     <div className="pt-6 lg:pt-8 xl:pt-10 2xl:pt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6">
-                        {awardsData?.map((award) => (
+                        {data?.map((award) => (
                             <div
                                 key={award?.id}
                                 onClick={() => handleAwardClick(award)}
                                 className="p-4 bg-white rounded-2xl flex flex-col items-center h-full cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300 group"
                             >
-                                <Image
-                                    src={award?.awardImg}
-                                    alt="award image"
+                                <StrapiImage
+                                    src={award?.logo?.url}
+                                    alt={
+                                        award?.logo?.alternativeText ||
+                                        "award image"
+                                    }
                                     width={70}
                                     height={70}
                                     className="w-[70px] h-[70px] rounded-lg group-hover:scale-110 transition-transform duration-200"
                                 />
                                 <h3 className="font-normal text-lg text-light-foreground font-anton py-3 text-center">
-                                    {award?.awardName}
+                                    {award?.title}
                                 </h3>
                                 <p className="font-normal text-sm text-light-secondary flex items-center gap-2">
                                     <svg
@@ -99,7 +102,7 @@ export default function Awards() {
                                             fill="#FF6D00"
                                         />
                                     </svg>
-                                    {award?.awardDate}
+                                    {award?.date}
                                 </p>
                             </div>
                         ))}

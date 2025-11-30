@@ -543,7 +543,7 @@ export interface ApiAwardAward extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    date: Schema.Attribute.Date;
+    date: Schema.Attribute.String & Schema.Attribute.Required;
     gallery: Schema.Attribute.Media<'images', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::award.award'> &
@@ -716,42 +716,6 @@ export interface ApiExpertiseAreaExpertiseArea
   };
 }
 
-export interface ApiHomeBanenrHomeBanenr extends Struct.SingleTypeSchema {
-  collectionName: 'home_banenrs';
-  info: {
-    displayName: 'Home Banenr';
-    pluralName: 'home-banenrs';
-    singularName: 'home-banenr';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    doctor_image: Schema.Attribute.Media<'images'>;
-    experience_title: Schema.Attribute.String;
-    experience_years: Schema.Attribute.Integer;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::home-banenr.home-banenr'
-    > &
-      Schema.Attribute.Private;
-    patient_served_number: Schema.Attribute.String;
-    patient_served_title: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    short_description: Schema.Attribute.String;
-    tagline: Schema.Attribute.String;
-    title: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiHomeHome extends Struct.SingleTypeSchema {
   collectionName: 'homes';
   info: {
@@ -763,7 +727,9 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    blocks: Schema.Attribute.Component<'section.chief-consultant', true>;
+    blocks: Schema.Attribute.DynamicZone<
+      ['blocks.banner', 'section.chief-consultant']
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1425,7 +1391,6 @@ declare module '@strapi/strapi' {
       'api::event.event': ApiEventEvent;
       'api::experience.experience': ApiExperienceExperience;
       'api::expertise-area.expertise-area': ApiExpertiseAreaExpertiseArea;
-      'api::home-banenr.home-banenr': ApiHomeBanenrHomeBanenr;
       'api::home.home': ApiHomeHome;
       'api::publication.publication': ApiPublicationPublication;
       'api::service.service': ApiServiceService;
